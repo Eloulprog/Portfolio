@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page non trouvée | Elouen Le Pendeven</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        .error-page {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: #FBF9F4;
+            padding: 2rem;
+        }
+
+        .error-content {
+            max-width: 600px;
+        }
+
+        .error-icon {
+            font-size: 5rem;
+            color: var(--accent-nature);
+            margin-bottom: 2rem;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .error-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .error-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="error-page">
+        <div class="error-content">
+            <div class="error-icon">
+                <i class="fas fa-fish"></i>
+            </div>
+            <h1 class="error-title">Oups... Mauvaise pioche !</h1>
+            <p class="error-text">
+                Il semble que nous ayons perdu le fil. Cette page n'existe plus ou a été déplacée dans un autre coin de
+                la rivière.
+            </p>
+            <a href="index.html" class="btn btn-primary">
+                <span>Retour à l'accueil</span>
+                <i class="fas fa-home"></i>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

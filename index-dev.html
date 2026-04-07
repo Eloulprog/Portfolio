@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elouen Le Pendeven | Version de travail</title>
+    <script>document.documentElement.classList.add('js');</script>
+    <meta name="description"
+        content="Version de travail du portfolio d'Elouen Le Pendeven.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Elouen Le Pendeven | Version de travail">
+    <meta property="og:description" content="Version de travail du portfolio en cours de refonte.">
+    <meta property="og:image" content="Images/Photo_CV2.png">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐟</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <header id="header">
+        <nav role="navigation" aria-label="Navigation principale">
+            <a href="#header" class="logo" aria-label="Elouen Portfolio Accueil">Elouen<span>.</span></a>
+            <ul class="nav-links" role="list">
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Contact</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu" aria-expanded="false"
+                aria-controls="mobileNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <nav class="mobile-nav" id="mobileNav" role="navigation" aria-label="Navigation mobile" aria-hidden="true">
+        <a href="#projets">Projets</a>
+        <a href="#competences">Compétences</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main id="main-content">
+        <section class="hero reveal-on-scroll">
+            <div class="hero-bg"></div>
+            <video class="hero-video" autoplay muted loop playsinline preload="none" aria-hidden="true">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4"
+                    type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-tag stagger-item">
+                    <i class="fas fa-circle"></i>
+                    <span>Version de travail</span>
+                </div>
+                <h1 class="stagger-item">
+                    <span>Capturer <em>l'instant</em>,</span>
+                    <span class="second-line">raconter l'histoire</span>
+                </h1>
+                <p class="hero-subtitle stagger-item">
+                    Base parallèle du portfolio en cours de refonte. Cette version sert à reconstruire une home plus
+                    propre, plus claire et plus premium sans toucher à la page temporaire actuellement en ligne.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projets" class="btn btn-primary">
+                        <span>Voir les projets</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                    <a href="CV.pdf" class="btn btn-cv" download="CV_Elouen_Le_Pendeven.pdf">
+                        <span>Télécharger CV</span>
+                        <i class="fas fa-file-download"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-ghost">
+                        <span>Contact</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="hero-credentials stagger-item" aria-label="Repères clés">
+                    <span><i class="fas fa-graduation-cap" aria-hidden="true"></i> BUT MMI</span>
+                    <span><i class="fas fa-briefcase" aria-hidden="true"></i> Alternance</span>
+                    <span><i class="fas fa-camera-retro" aria-hidden="true"></i> Vidéo · graphisme · photo</span>
+                </div>
+            </div>
+            <a href="#projets" class="hero-scroll-cue stagger-item">
+                <span>Découvrir</span>
+                <i class="fas fa-arrow-down"></i>
+            </a>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section class="projects-section" id="projets">
+            <div class="projects-wrapper">
+                <div class="section-header reveal-on-scroll">
+                    <div class="section-tag"><i class="fas fa-play-circle"></i> Réalisations</div>
+                    <h2 class="section-title">Projets <span>vidéo & graphisme</span></h2>
+                    <p class="section-subtitle">Base de travail de la future home, avec une hiérarchie plus claire pour les projets.</p>
+                </div>
+
+                <div class="projects-toolbar reveal-on-scroll">
+                    <div class="projects-filters" role="toolbar" aria-label="Filtrer les projets">
+                        <button class="project-filter active" type="button" data-filter="all" aria-pressed="true">Tous</button>
+                        <button class="project-filter" type="button" data-filter="video" aria-pressed="false">Vidéo</button>
+                        <button class="project-filter" type="button" data-filter="design" aria-pressed="false">Design</button>
+                        <button class="project-filter" type="button" data-filter="documentaire" aria-pressed="false">Documentaire</button>
+                        <button class="project-filter" type="button" data-filter="editorial" aria-pressed="false">Éditorial</button>
+                    </div>
+                    <p class="projects-count" aria-live="polite"><span id="projectsCount">6</span> <span id="projectsCountLabel">projets</span></p>
+                </div>
+
+                <div class="bento-grid">
+                    <a href="projets/alwestfest.html" class="bento-item project-card project-card-featured reveal-on-scroll"
+                        data-tags="design branding">
+                        <div class="project-card-panel">
+                            <div class="project-card-topline">
+                                <span class="project-card-year">2024</span>
+                                <span class="project-card-number">01</span>
+                            </div>
+                            <div class="project-card-tags" aria-hidden="true">
+                                <span>Design</span>
+                                <span>Festival</span>
+                            </div>
+                            <h3 class="project-card-title">À l'West Fest</h3>
+                            <p class="project-card-category">Identité visuelle festival</p>
+                            <div class="project-card-cta">
+                                <span>Voir le projet</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="project-card-media">
+                            <img src="Images/aff_festivalMMI.jpeg" alt="Festival MMI" width="800" height="800">
+                        </div>
+                    </a>
+
+                    <a href="projets/education-peche.html"
+                        class="bento-item project-card project-card-featured-alt reveal-on-scroll"
+                        data-tags="video documentaire">
+                        <div class="project-card-media">
+                            <img src="Images/Asso-source.jpg" alt="Tournage documentaire"
+                                class="filter-accent" width="400" height="400" loading="lazy">
+                        </div>
+                        <div class="project-card-panel">
+                            <div class="project-card-topline">
+                                <span class="project-card-year">2024</span>
+                                <span class="project-card-number">02</span>
+                            </div>
+                            <div class="project-card-tags" aria-hidden="true">
+                                <span>Documentaire</span>
+                                <span>Interview</span>
+                            </div>
+                            <h3 class="project-card-title">L'éducation par la pêche</h3>
+                            <p class="project-card-category">Mini-documentaire & interview</p>
+                            <div class="project-card-cta">
+                                <span>Explorer</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="projets/tv-show.html" class="bento-item project-card reveal-on-scroll"
+                        data-tags="video">
+                        <div class="project-card-media">
+                            <img src="Images/MOI.JPG" alt="A Broad Newscast" class="img-top" width="400" height="400"
+                                loading="lazy">
+                        </div>
+                        <div class="project-card-panel">
+                            <div class="project-card-topline">
+                                <span class="project-card-year">2025</span>
+                                <span class="project-card-number">03</span>
+                            </div>
+                            <div class="project-card-tags" aria-hidden="true">
+                                <span>Vidéo</span>
+                                <span>Émission</span>
+                            </div>
+                            <h3 class="project-card-title">A Broad Newscast</h3>
+                            <p class="project-card-category">Émission audiovisuelle en anglais</p>
+                            <div class="project-card-cta">
+                                <span>Explorer</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="projets/diorama-harry-potter.html" class="bento-item project-card reveal-on-scroll"
+                        data-tags="design video editorial">
+                        <div class="project-card-media">
+                            <img src="projets/diorama-poster.png" alt="Diorama Harry Potter" width="400"
+                                height="566" loading="lazy">
+                        </div>
+                        <div class="project-card-panel">
+                            <div class="project-card-topline">
+                                <span class="project-card-year">2025</span>
+                                <span class="project-card-number">04</span>
+                            </div>
+                            <div class="project-card-tags" aria-hidden="true">
+                                <span>3D</span>
+                                <span>Création</span>
+                            </div>
+                            <h3 class="project-card-title">Diorama Harry Potter</h3>
+                            <p class="project-card-category">Animation 3D & ambiance visuelle</p>
+                            <div class="project-card-cta">
+                                <span>Explorer</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="projets/fishing-day.html" class="bento-item project-card reveal-on-scroll"
+                        data-tags="design editorial">
+                        <div class="project-card-media">
+                            <img src="Images/ODD.png" alt="Fishing Day" width="400" height="400" loading="lazy">
+                        </div>
+                        <div class="project-card-panel">
+                            <div class="project-card-topline">
+                                <span class="project-card-year">2024</span>
+                                <span class="project-card-number">05</span>
+                            </div>
+                            <div class="project-card-tags" aria-hidden="true">
+                                <span>Design</span>
+                                <span>Affiche</span>
+                            </div>
+                            <h3 class="project-card-title">Fishing Day</h3>
+                            <p class="project-card-category">Campagne visuelle & affiche</p>
+                            <div class="project-card-cta">
+                                <span>Explorer</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="projets/nature-peche.html" class="bento-item project-card reveal-on-scroll"
+                        data-tags="editorial design">
+                        <div class="project-card-media">
+                            <img src="Images/Asso.jpg" alt="Nature & Pêche" width="400" height="400" loading="lazy">
+                        </div>
+                        <div class="project-card-panel">
+                            <div class="project-card-topline">
+                                <span class="project-card-year">2024</span>
+                                <span class="project-card-number">06</span>
+                            </div>
+                            <div class="project-card-tags" aria-hidden="true">
+                                <span>Éditorial</span>
+                                <span>Association</span>
+                            </div>
+                            <h3 class="project-card-title">Nature & Pêche</h3>
+                            <p class="project-card-category">Univers éditorial associatif</p>
+                            <div class="project-card-cta">
+                                <span>Explorer</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <p class="projects-empty" id="projectsEmpty" hidden>Aucun projet ne correspond à ce filtre pour le moment.</p>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section class="section" id="competences">
+            <div class="section-header reveal-on-scroll">
+                <div class="section-tag"><i class="fas fa-toolbox"></i> Compétences</div>
+                <h2 class="section-title">Outils & <span>pratiques</span></h2>
+                <p class="section-subtitle">Une base fonctionnelle pour retravailler ensuite la hiérarchie, le fond et le niveau de finition visuelle.</p>
+            </div>
+
+            <div class="skills-container">
+                <div class="skills-intro reveal-on-scroll">
+                    <h3>Un profil hybride</h3>
+                    <p>Vidéo, graphisme, photo et production: cette version de travail regroupe déjà les grands blocs du portfolio pour pouvoir les retravailler proprement ensuite.</p>
+                    <a href="CV.pdf" class="btn btn-cv" download="CV_Elouen_Le_Pendeven.pdf">
+                        <span>Télécharger CV</span>
+                        <i class="fas fa-file-download"></i>
+                    </a>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card reveal-on-scroll">
+                        <div class="skill-header">
+                            <div class="skill-icon"><i class="fas fa-video"></i></div>
+                            <h3 class="skill-title">Audiovisuel</h3>
+                        </div>
+                        <div class="skill-software">
+                            <img src="Images/Adobe/adobe-premiere-svgrepo-com.svg" alt="Adobe Premiere">
+                            <img src="Images/Adobe/adobe-after-effects-svgrepo-com.svg" alt="Adobe After Effects">
+                            <img src="Images/Adobe/DaVinci_Resolve_17_logo.svg.png" alt="DaVinci Resolve">
+                        </div>
+                        <ul class="skill-list">
+                            <li>Réalisation et montage</li>
+                            <li>Interview et format documentaire</li>
+                            <li>Écriture et rythme visuel</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card reveal-on-scroll">
+                        <div class="skill-header">
+                            <div class="skill-icon"><i class="fas fa-pen-ruler"></i></div>
+                            <h3 class="skill-title">Graphisme</h3>
+                        </div>
+                        <div class="skill-software">
+                            <img src="Images/Adobe/adobe-illustrator-svgrepo-com.svg" alt="Adobe Illustrator">
+                            <img src="Images/Adobe/adobe-photoshop-svgrepo-com.svg" alt="Adobe Photoshop">
+                            <img src="Images/Adobe/adobe-lightroom-svgrepo-com.svg" alt="Adobe Lightroom">
+                        </div>
+                        <ul class="skill-list">
+                            <li>Identité visuelle</li>
+                            <li>Composition et hiérarchie</li>
+                            <li>Déclinaisons print et écran</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card reveal-on-scroll">
+                        <div class="skill-header">
+                            <div class="skill-icon"><i class="fas fa-camera-retro"></i></div>
+                            <h3 class="skill-title">Photo</h3>
+                        </div>
+                        <div class="skill-software">
+                            <img src="Images/Adobe/cadre-photo.png" alt="Cadrage">
+                            <img src="Images/Adobe/eclairage-de-studio.png" alt="Éclairage">
+                            <img src="Images/Adobe/adobe-lightroom-svgrepo-com.svg" alt="Adobe Lightroom">
+                        </div>
+                        <ul class="skill-list">
+                            <li>Image de terrain</li>
+                            <li>Ambiance et lumière naturelle</li>
+                            <li>Sélection et cohérence éditoriale</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card reveal-on-scroll">
+                        <div class="skill-header">
+                            <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
+                            <h3 class="skill-title">Production</h3>
+                        </div>
+                        <div class="skill-software">
+                            <img src="Images/Adobe/reseaux-sociaux.png" alt="Réseaux sociaux">
+                            <img src="Images/Adobe/strategie-dentreprise.png" alt="Stratégie">
+                            <img src="Images/Adobe/javascript-svgrepo-com.svg" alt="JavaScript">
+                        </div>
+                        <ul class="skill-list">
+                            <li>Coordination de projet</li>
+                            <li>Formats social media</li>
+                            <li>Base front-end pour portfolio</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section class="section" id="apropos">
+            <div class="section-header reveal-on-scroll">
+                <div class="section-tag"><i class="fas fa-user"></i> À propos</div>
+                <h2 class="section-title">Une base de <span>travail propre</span></h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-image reveal-on-scroll">
+                    <img src="Images/Photo_CV2.png" alt="Portrait d'Elouen Le Pendeven">
+                    <div class="about-badge">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="about-badge-text">
+                            <strong>Vannes</strong>
+                            Bretagne & terrain
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content reveal-on-scroll">
+                    <p>Je m'appelle Elouen Le Pendeven. Cette page sert de base parallèle pour reconstruire le vrai portfolio pendant que la version publique reste temporairement en mode “site en travaux”.</p>
+                    <p>L'objectif ici est simple: repartir d'une structure saine, garder les bons projets, clarifier le positionnement et ensuite pousser la direction artistique sans casser le site visible.</p>
+                    <p>On peut maintenant retravailler cette home, les sections, les projets et le contenu sans toucher à la page d’attente en façade.</p>
+
+                    <div class="about-tags">
+                        <span class="about-tag">Vidéo</span>
+                        <span class="about-tag">Graphisme</span>
+                        <span class="about-tag">Photo</span>
+                        <span class="about-tag">Direction artistique</span>
+                    </div>
+
+                    <div class="about-actions">
+                        <a href="CV.pdf" class="btn btn-cv" download="CV_Elouen_Le_Pendeven.pdf">
+                            <span>Télécharger CV</span>
+                            <i class="fas fa-file-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section class="section contact-section" id="contact">
+            <div class="section-header center reveal-on-scroll">
+                <div class="section-tag"><i class="fas fa-paper-plane"></i> Contact</div>
+                <h2 class="contact-title">Toujours joignable</h2>
+                <p class="contact-subtitle">Même pendant la refonte, le contact reste ouvert pour échanger autour d’un projet, d’un stage, d’une alternance ou d’une collaboration.</p>
+            </div>
+
+            <div class="contact-links reveal-on-scroll">
+                <a class="contact-link" href="mailto:elouen.lependeven.pro@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    <span>elouen.lependeven.pro@gmail.com</span>
+                </a>
+                <a class="contact-link" href="CV.pdf" download="CV_Elouen_Le_Pendeven.pdf">
+                    <i class="fas fa-file-download"></i>
+                    <span>Télécharger le CV</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#header" class="footer-logo">Elouen<span>.</span></a>
+                    <p class="footer-tagline">Version de travail du portfolio, maintenue en parallèle de la page temporaire actuellement en ligne.</p>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="#projets">Projets</a></li>
+                        <li><a href="#competences">Compétences</a></li>
+                        <li><a href="#apropos">À propos</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Pages projet</h3>
+                    <ul class="footer-links">
+                        <li><a href="projets/alwestfest.html">À l'West Fest</a></li>
+                        <li><a href="projets/education-peche.html">L'éducation par la pêche</a></li>
+                        <li><a href="projets/tv-show.html">A Broad Newscast</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Contact</h3>
+                    <address class="footer-address">
+                        <a href="mailto:elouen.lependeven.pro@gmail.com">elouen.lependeven.pro@gmail.com</a>
+                        <a href="CV.pdf" download="CV_Elouen_Le_Pendeven.pdf">Télécharger le CV</a>
+                        <span>Vannes · Bretagne</span>
+                    </address>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">Version de travail interne du portfolio.</p>
+                <a href="#header" class="back-to-top">
+                    <span>Retour en haut</span>
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="animations.js"></script>
+</body>
+</html>

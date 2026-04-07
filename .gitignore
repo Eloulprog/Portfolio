@@ -1,0 +1,18 @@
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# macOS temp files
+*.swp
+*.swo
+
+# Large local source media not suitable for standard GitHub hosting
+English/LePendeven_Lallauret_Omnes_LindorVF.mp4
+SAE 204/
+Images/Adobe/Photoshop.svg
+
+# Optional local archives
+*.zip
