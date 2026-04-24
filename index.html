@@ -3,315 +3,475 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elouen Le Pendeven | Site en cours de construction</title>
-    <meta name="description"
-        content="Le portfolio d'Elouen Le Pendeven est actuellement en cours de construction. Revenez bientôt pour découvrir la nouvelle version.">
+    <title>Elouen Le Pendeven — Portfolio</title>
+    <meta name="description" content="Portfolio d'Elouen Le Pendeven, designer & créatif. En cours de refonte — disponible pour un stage, une alternance ou un projet.">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Elouen Le Pendeven | Site en cours de construction">
-    <meta property="og:description"
-        content="Le portfolio est en cours de construction. Une nouvelle version arrive bientôt.">
+    <meta property="og:title" content="Elouen Le Pendeven — Portfolio">
+    <meta property="og:description" content="Portfolio en refonte. Designer & créatif, disponible pour un échange.">
     <meta property="og:image" content="Images/Photo_CV2.png">
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚒️</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>✦</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
     <style>
-        :root {
-            --bg: #f6f1e8;
-            --surface: rgba(255, 255, 255, 0.72);
-            --surface-strong: rgba(255, 255, 255, 0.9);
-            --text: #1a1612;
-            --text-soft: #5a5148;
-            --muted: #877c70;
-            --accent: #a0522d;
-            --accent-soft: rgba(160, 82, 45, 0.12);
-            --line: rgba(26, 22, 18, 0.1);
-            --shadow: 0 24px 80px rgba(24, 22, 18, 0.09);
-            --radius-xl: 34px;
-            --radius-lg: 24px;
-        }
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        * {
-            box-sizing: border-box;
-        }
+    /* ── Tokens ── */
+    :root {
+        --bg:          #f4efe5;
+        --text:        #19150f;
+        --text-soft:   #5c5248;
+        --muted:       #9b8f82;
+        --accent:      #9e4f28;
+        --surface:     rgba(255, 255, 255, 0.60);
+        --surface-hi:  rgba(255, 255, 255, 0.95);
+        --line:        rgba(25, 21, 15, 0.09);
+        --line-hi:     rgba(25, 21, 15, 0.14);
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    html { scroll-behavior: smooth; }
 
-        body {
-            margin: 0;
-            min-height: 100vh;
-            font-family: 'Inter', sans-serif;
-            color: var(--text);
-            background:
-                radial-gradient(circle at top left, rgba(160, 82, 45, 0.13), transparent 28%),
-                radial-gradient(circle at 90% 10%, rgba(84, 111, 139, 0.12), transparent 20%),
-                linear-gradient(180deg, #fbf8f2 0%, var(--bg) 48%, #fcfaf6 100%);
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
+    body {
+        font-family: 'Inter', sans-serif;
+        background:
+            radial-gradient(ellipse 55% 45% at 5% 8%,  rgba(158, 79, 40, 0.10) 0%, transparent 60%),
+            radial-gradient(ellipse 40% 35% at 95% 5%,  rgba(84, 111, 139, 0.08) 0%, transparent 55%),
+            #f4efe5;
+        color: var(--text);
+        min-height: 100svh;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+    }
 
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            opacity: 0.02;
-            mix-blend-mode: multiply;
-            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-        }
+    /* ── Layout ── */
+    .page {
+        width: min(calc(100% - 3rem), 1140px);
+        margin: 0 auto;
+        min-height: 100svh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        padding: 2.5rem 0 2rem;
+    }
 
-        a {
-            color: inherit;
-        }
+    /* ── Entrées échelonnées — purement CSS ── */
+    .animate {
+        opacity: 0;
+        transform: translateY(18px);
+        animation: rise 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .d1 { animation-delay: 0.05s; }
+    .d2 { animation-delay: 0.20s; }
+    .d3 { animation-delay: 0.35s; }
+    .d4 { animation-delay: 0.50s; }
+    .d5 { animation-delay: 0.65s; }
+    .d6 { animation-delay: 0.80s; }
+    .d7 { animation-delay: 0.90s; }
 
-        .page {
-            width: min(calc(100% - 2rem), 1180px);
-            margin: 0 auto;
-            min-height: 100vh;
-            display: grid;
-            align-items: center;
-            padding: 2rem 0;
-        }
+    /* carte : légèrement différente (scale en plus) */
+    .animate-card {
+        opacity: 0;
+        transform: translateY(24px) scale(0.98);
+        animation: riseCard 0.80s cubic-bezier(0.22, 1, 0.36, 1) 0.30s forwards;
+    }
 
-        .maintenance-shell {
-            display: grid;
-            grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-            gap: clamp(1.5rem, 4vw, 3rem);
-            align-items: center;
-        }
+    /* ── Topbar ── */
+    .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-        .maintenance-panel {
-            max-width: 42rem;
-        }
+    .logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: var(--text);
+        text-decoration: none;
+    }
 
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            padding: 0.55rem 0.95rem;
-            border-radius: 999px;
-            background: var(--surface-strong);
-            border: 1px solid var(--line);
-            color: var(--accent);
-            font-size: 0.76rem;
-            font-weight: 700;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-        }
+    .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.38rem 0.82rem;
+        border-radius: 999px;
+        background: var(--surface-hi);
+        border: 1px solid var(--line-hi);
+        font-size: 0.69rem;
+        font-weight: 600;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: var(--accent);
+    }
 
-        h1 {
-            margin: 1.35rem 0 0;
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(3rem, 8vw, 6.2rem);
-            line-height: 0.94;
-            letter-spacing: -0.06em;
-            font-weight: 700;
-        }
+    /* Pulse : communication de statut "live" */
+    .pulse {
+        width: 7px; height: 7px;
+        border-radius: 50%;
+        background: var(--accent);
+        position: relative;
+        flex-shrink: 0;
+    }
+    .pulse::after {
+        content: "";
+        position: absolute;
+        inset: -3px;
+        border-radius: 50%;
+        background: var(--accent);
+        opacity: 0.28;
+        animation: pulseRing 2.4s ease-out infinite;
+    }
 
-        .lead {
-            max-width: 38rem;
-            margin: 1.35rem 0 0;
-            color: var(--text-soft);
-            font-size: clamp(1rem, 1.6vw, 1.16rem);
-            line-height: 1.8;
-        }
+    /* ── Grille principale ── */
+    .shell {
+        display: grid;
+        grid-template-columns: 1fr minmax(0, 385px);
+        gap: clamp(2.5rem, 5vw, 6rem);
+        align-items: center;
+        padding: clamp(2rem, 5vh, 4rem) 0;
+    }
 
-        .actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.9rem;
-            margin-top: 2rem;
-        }
+    /* ── Panneau gauche ── */
+    .panel { display: flex; flex-direction: column; }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.7rem;
-            min-height: 54px;
-            padding: 0.95rem 1.35rem;
-            border-radius: 999px;
-            font-size: 0.92rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            text-decoration: none;
-            border: 1px solid var(--line);
-            transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
-        }
+    .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        color: var(--accent);
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.17em;
+        text-transform: uppercase;
+    }
+    .eyebrow-rule {
+        display: block;
+        width: 28px; height: 1px;
+        background: currentColor;
+        opacity: 0.5;
+        flex-shrink: 0;
+    }
 
-        .btn-primary {
-            background: var(--text);
-            border-color: var(--text);
-            color: #ffffff;
-        }
+    h1 {
+        margin-top: 1rem;
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(3.4rem, 7.5vw, 6.5rem);
+        line-height: 0.92;
+        letter-spacing: -0.05em;
+        font-weight: 700;
+        color: var(--text);
+    }
+    h1 em {
+        font-style: italic;
+        font-weight: 400;
+        color: var(--accent);
+    }
 
-        .btn-primary:hover {
-            background: var(--accent);
-            border-color: var(--accent);
-            transform: translateY(-2px);
-        }
+    .lead {
+        margin-top: 1.6rem;
+        color: var(--text-soft);
+        font-size: clamp(0.95rem, 1.4vw, 1.08rem);
+        line-height: 1.85;
+        max-width: 36rem;
+    }
 
-        .btn-secondary {
-            background: var(--surface-strong);
-            color: var(--text);
-        }
+    /* ── Boutons ── */
+    .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 2.2rem;
+    }
 
-        .btn-secondary:hover {
-            background: #ffffff;
-            border-color: rgba(160, 82, 45, 0.22);
-            transform: translateY(-2px);
-        }
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        height: 50px;
+        padding: 0 1.4rem;
+        border-radius: 999px;
+        font-size: 0.86rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        text-decoration: none;
+        border: 1.5px solid transparent;
+        transition: background 0.2s ease, border-color 0.2s ease,
+                    color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+        white-space: nowrap;
+    }
+    .btn svg { width: 15px; height: 15px; flex-shrink: 0; }
 
-        .maintenance-card {
-            position: relative;
-            overflow: hidden;
-            border-radius: var(--radius-xl);
-            background: var(--surface);
-            border: 1px solid var(--line);
-            box-shadow: var(--shadow);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-            padding: clamp(1.4rem, 3vw, 2rem);
-        }
+    .btn-primary { background: var(--text); color: #fff; border-color: var(--text); }
+    .btn-primary:hover {
+        background: var(--accent);
+        border-color: var(--accent);
+        box-shadow: 0 6px 24px rgba(158, 79, 40, 0.24);
+        transform: translateY(-1px);
+    }
 
-        .maintenance-card::before {
-            content: "";
-            position: absolute;
-            inset: auto -10% -18% auto;
-            width: 200px;
-            aspect-ratio: 1;
-            border-radius: 999px;
-            background: radial-gradient(circle, rgba(160, 82, 45, 0.14), transparent 70%);
-            pointer-events: none;
-        }
+    .btn-secondary { background: var(--surface-hi); color: var(--text); border-color: var(--line-hi); }
+    .btn-secondary:hover {
+        border-color: rgba(158, 79, 40, 0.35);
+        color: var(--accent);
+        transform: translateY(-1px);
+    }
 
-        .maintenance-visual {
-            display: grid;
-            gap: 1rem;
-        }
+    .note {
+        margin-top: 1.8rem;
+        color: var(--muted);
+        font-size: 0.81rem;
+    }
 
-        .portrait {
-            overflow: hidden;
-            border-radius: 26px;
-            aspect-ratio: 4 / 5;
-            background: #ddd4c8;
-        }
+    /* ── Carte droite ── */
+    .card-wrap {}
 
-        .portrait img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center top;
-        }
+    .card {
+        position: relative;
+        border-radius: 28px;
+        background: var(--surface);
+        border: 1px solid rgba(255, 255, 255, 0.55);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow:
+            0 24px 64px rgba(20, 16, 10, 0.10),
+            0 2px 8px  rgba(20, 16, 10, 0.04),
+            inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        overflow: hidden;
+    }
 
-        .status {
-            display: grid;
-            gap: 0.85rem;
-        }
+    .card-inner {
+        padding: clamp(1.2rem, 2.5vw, 1.55rem);
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+    }
 
-        .status-item {
-            padding: 1rem 1.05rem;
-            border-radius: var(--radius-lg);
-            background: rgba(255, 255, 255, 0.78);
-            border: 1px solid rgba(26, 22, 18, 0.08);
-        }
+    /* Portrait */
+    .portrait {
+        border-radius: 18px;
+        overflow: hidden;
+        aspect-ratio: 3 / 3.3;
+        background: #ddd4c8;
+    }
+    .portrait img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+        object-position: center 30%;
+        display: block;
+        transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .card:hover .portrait img { transform: scale(1.04); }
 
-        .status-label {
-            display: block;
-            margin-bottom: 0.45rem;
-            color: var(--muted);
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-        }
+    /* Info grid */
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
+    }
 
-        .status-value {
-            margin: 0;
-            color: var(--text);
-            font-size: 0.98rem;
-            font-weight: 600;
-            line-height: 1.55;
-        }
+    .info-item {
+        padding: 0.75rem 0.85rem;
+        border-radius: 12px;
+        background: var(--surface-hi);
+        border: 1px solid var(--line);
+        transition: border-color 0.18s ease;
+    }
+    .info-item:hover { border-color: rgba(158, 79, 40, 0.20); }
+    .info-item.full { grid-column: 1 / -1; }
 
-        .footer-note {
-            margin-top: 1.2rem;
-            color: var(--muted);
-            font-size: 0.92rem;
-        }
+    .info-label {
+        display: block;
+        color: var(--muted);
+        font-size: 0.62rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-bottom: 0.25rem;
+    }
+    .info-value {
+        color: var(--text);
+        font-size: 0.84rem;
+        font-weight: 500;
+        line-height: 1.45;
+    }
 
-        @media (max-width: 920px) {
-            .maintenance-shell {
-                grid-template-columns: 1fr;
-            }
+    /* ── Ticker ── */
+    .ticker-wrap {
+        position: relative;
+        border-top: 1px solid var(--line);
+        padding: 0.9rem 0;
+        overflow: hidden;
+    }
+    .ticker-wrap::before,
+    .ticker-wrap::after {
+        content: "";
+        position: absolute;
+        top: 0; bottom: 0;
+        width: 72px;
+        z-index: 1;
+        pointer-events: none;
+    }
+    .ticker-wrap::before { left: 0;  background: linear-gradient(to right, var(--bg), transparent); }
+    .ticker-wrap::after  { right: 0; background: linear-gradient(to left,  var(--bg), transparent); }
 
-            .maintenance-panel {
-                max-width: none;
-            }
-        }
+    .ticker {
+        display: flex;
+        gap: 2.8rem;
+        width: max-content;
+        animation: ticker 24s linear infinite;
+    }
+    /* Pause au survol */
+    .ticker-wrap:hover .ticker { animation-play-state: paused; }
 
-        @media (max-width: 640px) {
-            .page {
-                width: min(calc(100% - 1rem), 1180px);
-            }
+    .ticker-item {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        color: var(--muted);
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+    .ticker-sep { color: var(--accent); opacity: 0.55; font-size: 0.55rem; }
 
-            .actions {
-                flex-direction: column;
-            }
+    /* ── Keyframes ── */
+    @keyframes rise {
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes riseCard {
+        to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes pulseRing {
+        0%  { transform: scale(1);   opacity: 0.3; }
+        70% { transform: scale(2.5); opacity: 0;   }
+        100%{ transform: scale(2.5); opacity: 0;   }
+    }
+    @keyframes ticker {
+        from { transform: translateX(0); }
+        to   { transform: translateX(-50%); }
+    }
 
-            .btn {
-                width: 100%;
-            }
-        }
+    /* ── Responsive ── */
+    @media (max-width: 820px) {
+        .shell { grid-template-columns: 1fr; }
+        .card-wrap { max-width: 400px; }
+        h1 { font-size: clamp(3rem, 11vw, 5rem); }
+    }
+
+    @media (max-width: 540px) {
+        .page { width: min(calc(100% - 2rem), 1140px); }
+        .actions { flex-direction: column; }
+        .btn { width: 100%; justify-content: center; }
+        .info-grid { grid-template-columns: 1fr; }
+        .info-item.full { grid-column: auto; }
+    }
     </style>
 </head>
 <body>
-    <main class="page">
-        <section class="maintenance-shell" aria-label="Site en travaux">
-            <div class="maintenance-panel">
-                <div class="eyebrow">
-                    <span>Site en cours de construction</span>
-                </div>
-                <h1>Le portfolio revient bientôt.</h1>
-                <p class="lead">
-                    Je retravaille actuellement le site pour proposer une version plus propre, plus claire et plus
-                    aboutie. Merci pour votre patience, une nouvelle version arrive prochainement.
-                </p>
-                <div class="actions">
-                    <a href="mailto:elouen.lependeven.pro@gmail.com" class="btn btn-primary">Me contacter</a>
-                    <a href="CV_Elouen_Le-Pendeven.pdf" class="btn btn-secondary" download="CV_Elouen_Le-Pendeven.pdf">Télécharger mon CV</a>
-                </div>
-                <p class="footer-note">
-                    En attendant, vous pouvez me joindre par mail ou consulter mon CV.
-                </p>
+<main class="page">
+
+    <!-- Topbar -->
+    <header class="topbar animate d1">
+        <a href="#" class="logo">E. Le Pendeven</a>
+        <div class="badge">
+            <span class="pulse"></span>
+            En refonte
+        </div>
+    </header>
+
+    <!-- Grille -->
+    <section class="shell" aria-label="Portfolio en construction">
+
+        <!-- Gauche -->
+        <div class="panel">
+            <div class="eyebrow animate d2">
+                <span class="eyebrow-rule"></span>
+                Portfolio
             </div>
 
-            <aside class="maintenance-card maintenance-visual" aria-label="Informations temporaires">
-                <div class="portrait">
-                    <img src="Images/Photo_CV2.png" alt="Portrait d'Elouen Le Pendeven">
+            <h1 class="animate d3">
+                Bientôt<br>de <em>retour.</em>
+            </h1>
+
+            <p class="lead animate d4">
+                Je retravaille le portfolio pour proposer quelque chose de plus propre,
+                plus personnel et mieux construit. En attendant, je suis disponible
+                pour un échange, un stage ou une alternance.
+            </p>
+
+            <div class="actions animate d5">
+                <a href="mailto:elouen.lependeven.pro@gmail.com" class="btn btn-primary">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="1.5" y="3.5" width="13" height="9" rx="1.2"/>
+                        <path d="M1.5 5 8 9l6.5-4"/>
+                    </svg>
+                    Me contacter
+                </a>
+                <a href="CV_Elouen_Le-Pendeven.pdf" class="btn btn-secondary" download>
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M8 2v8M5 8l3 3 3-3"/>
+                        <path d="M2.5 13h11"/>
+                    </svg>
+                    Télécharger mon CV
+                </a>
+            </div>
+
+            <p class="note animate d6">elouen.lependeven.pro@gmail.com</p>
+        </div>
+
+        <!-- Droite -->
+        <aside class="card-wrap animate-card" aria-label="Informations et disponibilité">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="portrait">
+                        <img src="Images/MOI.JPG" alt="Portrait d'Elouen Le Pendeven" loading="eager">
+                    </div>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Statut</span>
+                            <span class="info-value">Refonte en cours</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Disponibilité</span>
+                            <span class="info-value">Stage · alternance</span>
+                        </div>
+                        <div class="info-item full">
+                            <span class="info-label">En cours</span>
+                            <span class="info-value">UI/UX · Identité visuelle · Expérience utilisateur</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="status">
-                    <article class="status-item">
-                        <span class="status-label">Statut</span>
-                        <p class="status-value">Refonte du portfolio en cours.</p>
-                    </article>
-                    <article class="status-item">
-                        <span class="status-label">Contenu</span>
-                        <p class="status-value">Projets, identité visuelle et expérience utilisateur en réorganisation.</p>
-                    </article>
-                    <article class="status-item">
-                        <span class="status-label">Disponibilité</span>
-                        <p class="status-value">Toujours joignable pour un échange, un stage, une alternance ou un projet.</p>
-                    </article>
-                </div>
-            </aside>
-        </section>
-    </main>
+            </div>
+        </aside>
+
+    </section>
+
+    <!-- Ticker -->
+    <div class="ticker-wrap animate d7" aria-hidden="true">
+        <div class="ticker">
+            <span class="ticker-item"><span class="ticker-sep">✦</span> Design UI/UX</span>
+            <span class="ticker-item"><span class="ticker-sep">✦</span> Identité visuelle</span>
+            <span class="ticker-item"><span class="ticker-sep">✦</span> Direction artistique</span>
+            <span class="ticker-item"><span class="ticker-sep">✦</span> Développement web</span>
+            <span class="ticker-item"><span class="ticker-sep">✦</span> Motion design</span>
+            <span class="ticker-item"><span class="ticker-sep">✦</span> Photographie</span>
+            <!-- dupliqué pour la boucle seamless -->
+            <span class="ticker-item"><span class="ticker-sep">✦</span> Design UI/UX</span>
+            <span class="ticker-item"><span class="ticker-sep">✦</span> Identité visuelle</span>
+            <span class="ticker-item"><span class="ticker-sep">✦</span> Direction artistique</span>
+            <span class="ticker-item"><span class="ticker-sep">✦</span> Développement web</span>
+            <span class="ticker-item"><span class="ticker-sep">✦</span> Motion design</span>
+            <span class="ticker-item"><span class="ticker-sep">✦</span> Photographie</span>
+        </div>
+    </div>
+
+</main>
+
+
 </body>
 </html>
