@@ -105,7 +105,9 @@ function renderProjects() {
                 <p class="proj-desc">${p.summary}</p>
                 <span class="proj-status">${p.status}</span>
             </div>
-            <div class="proj-thumb-col ${p.thumb}" aria-hidden="true"></div>
+            <div class="proj-thumb-col${p.image ? '' : ' ' + p.thumb}" aria-hidden="true">
+                ${p.image ? `<img src="${p.image}" alt="" loading="lazy">` : ''}
+            </div>
             <span class="proj-arrow" aria-hidden="true">→</span>
         `;
         listEl.appendChild(card);
@@ -121,7 +123,9 @@ function renderProjects() {
         card.dataset.categories = p.category.join(',');
         card.innerHTML = `
             <div class="proj-grid-thumb">
-                <div class="proj-grid-thumb-inner ${p.thumb}"></div>
+                <div class="proj-grid-thumb-inner${p.image ? '' : ' ' + p.thumb}">
+                    ${p.image ? `<img src="${p.image}" alt="" loading="lazy">` : ''}
+                </div>
             </div>
             <div class="proj-grid-body">
                 <div class="proj-grid-tags">${tagsHtml}</div>

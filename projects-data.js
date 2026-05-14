@@ -15,6 +15,7 @@ const PROJECTS = [
         result:    'Le documentaire final met en lumière la pêche comme moyen d\'éducation, de transmission et de sensibilisation à l\'environnement. Les deux intervenants apportent des visions différentes mais complémentaires, notamment sur la pratique du no kill, la responsabilité des pêcheurs et l\'impact de nos habitudes sur les espèces vivant dans les cours d\'eau. Ce projet nous a permis de travailler dans des conditions réelles : recherche d\'intervenants, gestion des imprévus, interviews sur le terrain, captation image et son, puis sélection des informations les plus importantes pour un format court.',
         tools:     ['Canon 90D', 'Micros DJI', 'Drone DJI Mini 3 Pro', 'Mixette H4', 'Interview', 'Tournage documentaire', 'Storyboard', 'Plans de coupe'],
         thumb:     'pt-1',
+        image:     'Images/PREVIEW/View_DEMMAIN.png',
         video:     'https://www.youtube.com/embed/2GS1XvzpksQ?list=PLM8AYv9xW4JyLqnWTIopKbpchLx04NqOY',
         status:    'Réalisé',
         date:      '2025',
@@ -31,6 +32,7 @@ const PROJECTS = [
         result:    'L\'émission a été enregistrée dans le respect du timing, malgré quelques incompréhensions entre la régie et les présentateurs au moment des lancements audio. Ce projet m\'a permis de développer des compétences concrètes en rédaction radio, en prise de parole, en gestion du stress, en coordination d\'équipe et en rigueur journalistique. Cette expérience m\'a particulièrement marqué, notamment pour l\'adrénaline de la présentation en direct et la responsabilité liée au rôle de présentateur. Elle a aussi confirmé mon intérêt pour le monde de la presse, de la présentation et du travail en rédaction.',
         tools:     ['Écriture journalistique', 'Présentation radio', 'Conférence de rédaction', 'Duplex audio', 'Recherche d\'informations', 'Travail d\'équipe', 'Bemymedia'],
         thumb:     'pt-2',
+        image:     'Images/PREVIEW/View_RW.png',
         videos:    [
             { url: 'https://www.youtube.com/embed/ViqLSV_xTZs', label: 'Le journal radio' },
             { url: 'https://www.youtube.com/embed/KcFCA1V1R3M', label: 'Coulisses (réalisé par deux camarades)' },
@@ -50,6 +52,7 @@ const PROJECTS = [
         result:    'Le projet aboutit à un média digital complet, avec un nom, une identité graphique, une cible, une ligne éditoriale, des articles et une stratégie de publication. Mon article sur Rocket League permet de présenter le jeu comme une référence culturelle du jeu vidéo automobile, en montrant son accessibilité, sa scène compétitive et son statut de jeu culte. La partie réseaux sociaux donne au projet une vraie logique de diffusion : Instagram sert à présenter le média, montrer des exemples d\'articles et créer une porte d\'entrée vers le magazine en ligne.',
         tools:     ['Écriture multimédia', 'Ligne éditoriale', 'Stratégie réseaux sociaux', 'Instagram', 'Magazine en ligne', 'Rédaction web', 'Identité de média'],
         thumb:     'pt-3',
+        image:     'Images/PREVIEW/Logo_SHIFT.jpg',
         video:     'https://read.bookcreator.com/mF-YL8pWtAvYMLnms6ebwjBRIyOYa-oNpK0rA2ScFwU/PzKVluZJSkaFfFT2xB0oDg/yGAJwvRET0iX93jOoGSINA',
         links:     [
             { label: 'Instagram @shift.jv', href: 'https://www.instagram.com/shift.jv/' },
@@ -69,6 +72,7 @@ const PROJECTS = [
         result:    'Le projet aboutit à un concept de messagerie plus pédagogique et responsable. L\'interface ne se contente plus d\'envoyer des emails : elle aide l\'utilisateur à comprendre, optimiser et suivre l\'impact de ses actions numériques. Le parcours utilisateur montre une expérience fluide : l\'utilisateur ajoute une pièce jointe, visualise son impact, peut l\'optimiser, puis consulte les économies réalisées dans un tableau de bord. Cette approche transforme l\'email en véritable espace de décision, plus lisible et plus durable.',
         tools:     ['UX Design', 'Benchmark', 'Design thinking', 'User Journey Map', 'Figma', 'Analyse fonctionnelle', 'Éco-conception numérique'],
         thumb:     'pt-4',
+        image:     'Images/PREVIEW/View_MAILSENSE.png',
         video:     'https://www.figma.com/embed?embed_host=share&url=' + encodeURIComponent('https://www.figma.com/proto/AjZ3eh4gg7lDRAUaqw3sM7/R4.03-GMAIL?node-id=7-307&viewport=271%2C310%2C0.05&t=6a9RKOJHXplGQx0D-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=7%3A307&page-id=0%3A1'),
         links:     [
             { label: 'Ouvrir le prototype Figma', href: 'https://www.figma.com/proto/AjZ3eh4gg7lDRAUaqw3sM7/R4.03-GMAIL?node-id=7-307&starting-point-node-id=7%3A307' },
@@ -88,6 +92,7 @@ const PROJECTS = [
         result:    'La maquette finale propose une expérience mobile permettant de découvrir des événements, consulter les détails d\'un spectacle et réserver des places. L\'application intègre aussi des recommandations personnalisées selon les goûts de l\'utilisateur.',
         tools:     ['Figma', 'Wireframe', 'Design system', 'UX/UI', 'Benchmark'],
         thumb:     'pt-1',
+        image:     'Images/PREVIEW/View_ROZ.png',
         video:     'https://www.figma.com/embed?embed_host=share&url=' + encodeURIComponent('https://www.figma.com/proto/ngaseYepCZVQUHlTGz7yc2/ROZ-Culture?node-id=33-569&viewport=116%2C490%2C0.14&t=yvJhnRQ6DhFR1Gm7-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=33%3A569&show-proto-sidebar=1&page-id=0%3A1'),
         links:     [
             { label: 'Ouvrir le prototype Figma', href: 'https://www.figma.com/proto/ngaseYepCZVQUHlTGz7yc2/ROZ-Culture?node-id=33-569&starting-point-node-id=33%3A569' },
@@ -107,6 +112,7 @@ const PROJECTS = [
         result:    'Le livrable final est un cahier des charges complet pour un dispositif VR réutilisable lors des Journées Portes Ouvertes, salons ou présentations pédagogiques. Il définit le contexte, les objectifs, le principe de l\'expérience, les moyens techniques, les contraintes, les acteurs du projet, les livrables attendus et la méthode d\'évaluation. Le dispositif final est pensé pour être installé rapidement, fonctionner sans ordinateur externe et être compréhensible aussi bien par l\'utilisateur dans le casque que par les parents ou encadrants grâce à une retransmission vidéo.',
         tools:     ['Unity', 'Meta Quest 3', 'Réalité virtuelle', 'UX', 'Cahier des charges', 'Questionnaire utilisateur', 'Grille d\'observation', 'Gestion de projet'],
         thumb:     'pt-2',
+        image:     'Images/PREVIEW/View_12COUPSpng.png',
         status:    'Réalisé',
         date:      '2026',
     },

@@ -598,26 +598,43 @@
                 return;
             }
 
-            // 1) Progressive line fill, scrubbed to scroll
+            // 1) Remplissage de l'axe, scrubbed lent et long
             gsap.to(axisFill, {
                 height: '100%',
                 ease: 'none',
                 scrollTrigger: {
                     trigger: container,
-                    start: 'top 75%',
-                    end: 'bottom 80%',
-                    scrub: 0.6
+                    start: 'top 85%',
+                    end: 'bottom 55%',
+                    scrub: 2.2
                 }
             });
 
-            // 2) Stagger reveal per item with side slide
+            // 2) Chaque item : reveal scrubbé (apparition + slide latéral)
+            //    progressivement sur une fenêtre de scroll étendue.
             items.forEach((item) => {
-                ScrollTrigger.create({
-                    trigger: item,
-                    start: 'top 78%',
-                    once: true,
-                    onEnter: () => item.classList.add('is-active')
-                });
+                const isLeft = item.classList.contains('tv-left');
+                const card = item.querySelector('.tv-card');
+                const node = item.querySelector('.tv-node');
+
+                // État initial (remplace le opacity:0 + translate CSS)
+                gsap.set(card, { opacity: 0, x: isLeft ? -60 : 60, filter: 'blur(4px)' });
+                gsap.set(node, { scale: 0.4, opacity: 0.3 });
+
+                gsap.timeline({
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top 90%',
+                        end: 'top 45%',
+                        scrub: 1.8
+                    }
+                })
+                .to(node, { scale: 1, opacity: 1, ease: 'none' }, 0)
+                .to(card, {
+                    opacity: 1, x: 0, filter: 'blur(0px)',
+                    ease: 'none'
+                }, 0.15)
+                .add(() => item.classList.add('is-active'), 0.5);
             });
         })();
     </script>
