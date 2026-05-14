@@ -16,3 +16,9 @@ Images/Adobe/Photoshop.svg
 
 # Optional local archives
 *.zip
+
+# Local trash
+_trash/
+
+# Claude Code agent state
+.claude/
