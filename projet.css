@@ -202,6 +202,75 @@
     font-style: italic;
 }
 
+/* ── Embed Figma : chrome navigateur + hauteur dédiée ── */
+.projet-visual-figma {
+    aspect-ratio: auto;
+    height: clamp(520px, 78vh, 780px);
+    background: #1E1E1E;
+    border: 1px solid rgba(45,212,191,0.12);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    box-shadow:
+        0 1px 0 rgba(255,255,255,0.04) inset,
+        0 24px 60px -20px rgba(0,0,0,0.55);
+    display: flex; flex-direction: column;
+    transition: box-shadow 0.4s ease, transform 0.4s ease, border-color 0.4s ease;
+}
+.projet-visual-figma:hover {
+    border-color: rgba(45,212,191,0.35);
+    box-shadow:
+        0 1px 0 rgba(255,255,255,0.06) inset,
+        0 32px 70px -20px rgba(0,0,0,0.65),
+        0 0 50px -10px rgba(45,212,191,0.25);
+}
+.projet-visual-figma iframe {
+    flex: 1;
+    width: 100%;
+    background: #1E1E1E;
+}
+.figma-chrome {
+    display: flex; align-items: center; gap: 0.45rem;
+    padding: 0.7rem 1rem;
+    background: linear-gradient(180deg, #2B2B2B, #1E1E1E);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    flex-shrink: 0;
+}
+.figma-chrome-dot {
+    width: 11px; height: 11px; border-radius: 50%;
+    background: #444;
+}
+.figma-chrome-dot:nth-child(1) { background: #FF5F57; }
+.figma-chrome-dot:nth-child(2) { background: #FEBC2E; }
+.figma-chrome-dot:nth-child(3) { background: #28C840; }
+.figma-chrome-label {
+    margin-left: 0.6rem;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+}
+.figma-chrome-expand {
+    margin-left: auto;
+    width: 26px; height: 26px;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    background: rgba(45,212,191,0.12);
+    border: 1px solid rgba(45,212,191,0.3);
+    color: #2DD4BF;
+    font-family: 'Syne', sans-serif; font-size: 0.8rem;
+    text-decoration: none;
+    transition: background 0.25s, color 0.25s, transform 0.25s;
+}
+.figma-chrome-expand:hover {
+    background: #2DD4BF; color: #0A2A33;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 700px) {
+    .projet-visual-figma { height: 70vh; min-height: 460px; }
+    .figma-chrome-label { display: none; }
+}
+
 .projet-links {
     display: flex; flex-wrap: wrap; gap: 0.6rem;
     margin: 1.5rem 0 0.5rem;

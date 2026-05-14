@@ -70,9 +70,19 @@
             videos.forEach(v => {
                 const url = typeof v === 'string' ? v : v.url;
                 const caption = (typeof v === 'object' && v.label) ? v.label : '';
+                const isFigma = /figma\.com/.test(url);
                 const frame = document.createElement('div');
-                frame.className = 'projet-visual-inner projet-visual-video';
+                frame.className = 'projet-visual-inner projet-visual-video' + (isFigma ? ' projet-visual-figma' : '');
                 frame.innerHTML = `
+                    ${isFigma ? `
+                        <div class="figma-chrome">
+                            <span class="figma-chrome-dot"></span>
+                            <span class="figma-chrome-dot"></span>
+                            <span class="figma-chrome-dot"></span>
+                            <span class="figma-chrome-label">Prototype Figma</span>
+                            <a class="figma-chrome-expand" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir en plein écran">↗</a>
+                        </div>
+                    ` : ''}
                     <iframe
                         src="${url}"
                         title="${projet.title}${caption ? ' — ' + caption : ''}"

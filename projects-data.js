@@ -69,6 +69,10 @@ const PROJECTS = [
         result:    'Le projet aboutit à un concept de messagerie plus pédagogique et responsable. L\'interface ne se contente plus d\'envoyer des emails : elle aide l\'utilisateur à comprendre, optimiser et suivre l\'impact de ses actions numériques. Le parcours utilisateur montre une expérience fluide : l\'utilisateur ajoute une pièce jointe, visualise son impact, peut l\'optimiser, puis consulte les économies réalisées dans un tableau de bord. Cette approche transforme l\'email en véritable espace de décision, plus lisible et plus durable.',
         tools:     ['UX Design', 'Benchmark', 'Design thinking', 'User Journey Map', 'Figma', 'Analyse fonctionnelle', 'Éco-conception numérique'],
         thumb:     'pt-4',
+        video:     'https://www.figma.com/embed?embed_host=share&url=' + encodeURIComponent('https://www.figma.com/proto/AjZ3eh4gg7lDRAUaqw3sM7/R4.03-GMAIL?node-id=7-307&viewport=271%2C310%2C0.05&t=6a9RKOJHXplGQx0D-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=7%3A307&page-id=0%3A1'),
+        links:     [
+            { label: 'Ouvrir le prototype Figma', href: 'https://www.figma.com/proto/AjZ3eh4gg7lDRAUaqw3sM7/R4.03-GMAIL?node-id=7-307&starting-point-node-id=7%3A307' },
+        ],
         status:    'Réalisé',
         date:      '2025',
     },
@@ -84,6 +88,10 @@ const PROJECTS = [
         result:    'La maquette finale propose une expérience mobile permettant de découvrir des événements, consulter les détails d\'un spectacle et réserver des places. L\'application intègre aussi des recommandations personnalisées selon les goûts de l\'utilisateur.',
         tools:     ['Figma', 'Wireframe', 'Design system', 'UX/UI', 'Benchmark'],
         thumb:     'pt-1',
+        video:     'https://www.figma.com/embed?embed_host=share&url=' + encodeURIComponent('https://www.figma.com/proto/ngaseYepCZVQUHlTGz7yc2/ROZ-Culture?node-id=33-569&viewport=116%2C490%2C0.14&t=yvJhnRQ6DhFR1Gm7-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=33%3A569&show-proto-sidebar=1&page-id=0%3A1'),
+        links:     [
+            { label: 'Ouvrir le prototype Figma', href: 'https://www.figma.com/proto/ngaseYepCZVQUHlTGz7yc2/ROZ-Culture?node-id=33-569&starting-point-node-id=33%3A569' },
+        ],
         status:    'Réalisé',
         date:      '2025',
     },
