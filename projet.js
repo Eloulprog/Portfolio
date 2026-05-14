@@ -59,11 +59,56 @@
         toolsListEl.appendChild(badge);
     });
 
-    /* Thumb visuel */
+    /* Visuel : vidéo(s) si fournie(s), sinon thumb gradient */
     const visual = document.getElementById('projet-visual');
+    const visualWrap = visual ? visual.parentElement : null;
+    const videos = projet.videos || (projet.video ? [{ url: projet.video }] : []);
     if (visual) {
-        visual.className = `projet-visual-inner ${projet.thumb}`;
-        visual.innerHTML = '';
+        if (videos.length) {
+            const wrap = visualWrap;
+            wrap.innerHTML = '';
+            videos.forEach(v => {
+                const url = typeof v === 'string' ? v : v.url;
+                const caption = (typeof v === 'object' && v.label) ? v.label : '';
+                const frame = document.createElement('div');
+                frame.className = 'projet-visual-inner projet-visual-video';
+                frame.innerHTML = `
+                    <iframe
+                        src="${url}"
+                        title="${projet.title}${caption ? ' — ' + caption : ''}"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
+                `;
+                wrap.appendChild(frame);
+                if (caption) {
+                    const cap = document.createElement('p');
+                    cap.className = 'projet-visual-caption';
+                    cap.textContent = caption;
+                    wrap.appendChild(cap);
+                }
+            });
+        } else {
+            visual.className = `projet-visual-inner ${projet.thumb}`;
+            visual.innerHTML = '';
+        }
+    }
+
+    /* Liens externes (Instagram, site, etc.) */
+    if (projet.links && projet.links.length && visualWrap) {
+        const linksWrap = document.createElement('div');
+        linksWrap.className = 'projet-links';
+        projet.links.forEach(l => {
+            const a = document.createElement('a');
+            a.className = 'projet-link-btn';
+            a.href = l.href;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            a.innerHTML = `${l.label} <span aria-hidden="true">↗</span>`;
+            linksWrap.appendChild(a);
+        });
+        visualWrap.insertAdjacentElement('afterend', linksWrap);
     }
 
     /* Navigation prev / next */

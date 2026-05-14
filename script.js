@@ -1,36 +1,4 @@
 /* ═══════════════════════════════════════════════
-   THEME TOGGLE
-   V1/V2 : défaut light → toggle "dark"
-   V3    : défaut dark  → toggle "light"
-═══════════════════════════════════════════════ */
-(function() {
-    const css = document.querySelector('link[rel="stylesheet"]') &&
-                document.querySelector('link[rel="stylesheet"]').href || '';
-    const isV3 = css.includes('style-v3');
-    const ATTR  = isV3 ? 'light' : 'dark';
-    const KEY   = 'portfolio-theme-' + (isV3 ? 'v3' : 'v12');
-
-    const saved = localStorage.getItem(KEY);
-    if (saved === ATTR) document.documentElement.setAttribute('data-theme', ATTR);
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const btn = document.getElementById('theme-btn');
-        if (!btn) return;
-
-        btn.addEventListener('click', () => {
-            const current = document.documentElement.getAttribute('data-theme');
-            if (current === ATTR) {
-                document.documentElement.removeAttribute('data-theme');
-                localStorage.removeItem(KEY);
-            } else {
-                document.documentElement.setAttribute('data-theme', ATTR);
-                localStorage.setItem(KEY, ATTR);
-            }
-        });
-    });
-})();
-
-/* ═══════════════════════════════════════════════
    NAV — elevation + burger mobile
 ═══════════════════════════════════════════════ */
 const nav    = document.getElementById('nav');
