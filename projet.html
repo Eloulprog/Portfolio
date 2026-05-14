@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet — Elouen Le Pendeven</title>
+    <meta name="description" content="Détail du projet — Portfolio d'Elouen Le Pendeven.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%232DD4BF%22/></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projet.css">
+</head>
+<body class="projet-page">
+
+<!-- NAV -->
+<nav id="nav">
+    <div class="wrap">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <span class="nav-logo-dot" aria-hidden="true"></span>
+                Elouen Le Pendeven
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">Qui suis-je</a></li>
+                <li><a href="index.html#competences">Compétences</a></li>
+                <li><a href="index.html#projets">Projets</a></li>
+                <li><a href="index.html#parcours">Parcours</a></li>
+            </ul>
+            <a href="index.html#contact" class="nav-cta">Contact</a>
+            <button class="nav-burger" id="nav-burger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- HEADER PROJET -->
+<header class="projet-header" id="projet-header">
+    <div class="projet-header-bg" id="projet-header-bg" aria-hidden="true"></div>
+    <div class="wrap">
+        <div class="projet-header-content">
+            <a href="index.html#projets" class="projet-back reveal">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M10 3L5 8l5 5"/></svg>
+                Retour aux projets
+            </a>
+            <div class="projet-meta reveal d1">
+                <div class="projet-tags" id="projet-tags"></div>
+                <span class="projet-date" id="projet-date"></span>
+            </div>
+            <h1 class="projet-title reveal d2" id="projet-title">Titre du projet</h1>
+            <p class="projet-summary reveal d3" id="projet-summary">Résumé du projet.</p>
+        </div>
+    </div>
+</header>
+
+<!-- CORPS DU PROJET -->
+<main class="projet-main">
+    <div class="wrap">
+        <div class="projet-body">
+
+            <!-- Sidebar -->
+            <aside class="projet-sidebar">
+                <div class="projet-aside-block reveal">
+                    <div class="projet-aside-label">Outils utilisés</div>
+                    <div class="projet-tools" id="projet-tools"></div>
+                </div>
+                <div class="projet-aside-block reveal d1">
+                    <div class="projet-aside-label">Catégorie</div>
+                    <div class="projet-cat" id="projet-cat"></div>
+                </div>
+                <div class="projet-aside-block reveal d2">
+                    <div class="projet-aside-label">Statut</div>
+                    <div class="projet-stat-val" id="projet-stat-val"></div>
+                </div>
+                <div class="projet-aside-block reveal d3" id="projet-label-block" style="display:none">
+                    <div class="projet-aside-label">Contexte</div>
+                    <div class="projet-label-val" id="projet-label-val"></div>
+                </div>
+                <div class="projet-nav-links reveal d3">
+                    <a href="#" class="btn btn-primary btn-sm" id="prev-projet">← Précédent</a>
+                    <a href="#" class="btn btn-outline btn-sm" id="next-projet">Suivant →</a>
+                </div>
+            </aside>
+
+            <!-- Contenu principal -->
+            <article class="projet-article">
+
+                <!-- 01 · Présentation -->
+                <section class="projet-section reveal">
+                    <div class="projet-section-num">01</div>
+                    <div class="projet-section-body">
+                        <h2 class="projet-section-title">Présentation</h2>
+                        <div class="projet-section-text" id="section-presentation"></div>
+                    </div>
+                </section>
+
+                <!-- Visuel placeholder -->
+                <div class="projet-visual reveal d1">
+                    <div class="projet-visual-inner" id="projet-visual">
+                        <div class="projet-visual-placeholder">
+                            <span>Visuel en préparation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 02 · Mon rôle -->
+                <section class="projet-section reveal">
+                    <div class="projet-section-num">02</div>
+                    <div class="projet-section-body">
+                        <h2 class="projet-section-title">Mon rôle</h2>
+                        <div class="projet-section-text" id="section-role"></div>
+                    </div>
+                </section>
+
+                <!-- 03 · Processus -->
+                <section class="projet-section reveal">
+                    <div class="projet-section-num">03</div>
+                    <div class="projet-section-body">
+                        <h2 class="projet-section-title">Processus</h2>
+                        <div class="projet-section-text" id="section-process"></div>
+                    </div>
+                </section>
+
+                <!-- 04 · Résultat -->
+                <section class="projet-section reveal">
+                    <div class="projet-section-num">04</div>
+                    <div class="projet-section-body">
+                        <h2 class="projet-section-title">Résultat &amp; outils</h2>
+                        <div class="projet-section-text" id="section-result"></div>
+                        <div class="projet-tools-list" id="section-tools"></div>
+                    </div>
+                </section>
+
+            </article>
+        </div>
+    </div>
+
+    <!-- CTA bas de page -->
+    <div class="projet-cta-strip">
+        <div class="wrap">
+            <p class="projet-cta-label reveal">Intéressé par ce travail ?</p>
+            <h2 class="projet-cta-title reveal d1">Discutons de <span class="hw">votre projet.</span></h2>
+            <div class="reveal d2">
+                <a href="index.html#contact" class="btn btn-mint">Me contacter</a>
+                <a href="index.html#projets" class="btn btn-ghost-dark">Voir tous les projets</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="wrap">
+        <div class="foot-in">
+            <span class="foot-logo">
+                <span class="foot-logo-dot" aria-hidden="true"></span>
+                Elouen Le Pendeven
+            </span>
+            <span class="foot-copy">© 2025 — Design &amp; Création</span>
+            <ul class="foot-links">
+                <li><a href="mailto:elouen.lependeven.pro@gmail.com">Email</a></li>
+                <li><a href="CV_Elouen_Le_Pendeven.pdf" download>CV</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script src="projects-data.js"></script>
+<script src="script.js"></script>
+<script src="projet.js"></script>
+</body>
+</html>

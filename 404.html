@@ -1,67 +1,69 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page non trouvée | Elouen Le Pendeven</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>404 — Page introuvable · Elouen Le Pendeven</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%232DD4BF%22/></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        .error-page {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: #FBF9F4;
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0A2A33;
+            color: #F2EDE3;
+            min-height: 100vh;
+            display: grid; place-items: center;
             padding: 2rem;
+            text-align: center;
         }
-
-        .error-content {
-            max-width: 600px;
-        }
-
-        .error-icon {
-            font-size: 5rem;
-            color: var(--accent-nature);
-            margin-bottom: 2rem;
-            animation: float 4s ease-in-out infinite;
-        }
-
-        .error-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+        .wrap { max-width: 560px; }
+        .big {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: clamp(6rem, 22vw, 14rem);
+            line-height: 0.9; letter-spacing: -0.05em;
+            color: #2DD4BF;
             margin-bottom: 1rem;
-            color: var(--text-primary);
         }
-
-        .error-text {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
+        .hw {
+            font-family: 'Caveat', cursive;
+            font-weight: 600;
+            color: #F2EDE3;
         }
+        h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 700; letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+        p {
+            color: rgba(242,237,227,0.6);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        a.btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.85rem 1.6rem;
+            background: #2DD4BF; color: #0A2A33;
+            border-radius: 10px;
+            font-family: 'Syne', sans-serif;
+            font-size: 0.75rem; font-weight: 800;
+            letter-spacing: 0.08em; text-transform: uppercase;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        a.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(45,212,191,0.35); }
     </style>
 </head>
-
 <body>
-    <div class="error-page">
-        <div class="error-content">
-            <div class="error-icon">
-                <i class="fas fa-fish"></i>
-            </div>
-            <h1 class="error-title">Oups... Mauvaise pioche !</h1>
-            <p class="error-text">
-                Il semble que nous ayons perdu le fil. Cette page n'existe plus ou a été déplacée dans un autre coin de
-                la rivière.
-            </p>
-            <a href="index.html" class="btn btn-primary">
-                <span>Retour à l'accueil</span>
-                <i class="fas fa-home"></i>
-            </a>
-        </div>
+    <div class="wrap">
+        <div class="big">404<span class="hw">?</span></div>
+        <h1>Cette page s'est perdue en chemin.</h1>
+        <p>Le lien est peut-être cassé, ou la page a été déplacée. Reviens à l'accueil pour redécouvrir le portfolio.</p>
+        <a href="/" class="btn">← Retour à l'accueil</a>
     </div>
 </body>
-
 </html>
