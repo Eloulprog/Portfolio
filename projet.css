@@ -157,12 +157,18 @@
 }
 
 .projet-section-title {
+    display: inline-block;
     font-family: 'Syne', sans-serif;
-    font-size: clamp(1.3rem, 2vw, 1.8rem);
-    font-weight: 800; letter-spacing: -0.03em;
-    color: var(--ink); margin-bottom: 1.2rem;
-    padding-bottom: 0.8rem;
-    border-bottom: 2px solid var(--bg-alt);
+    font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: var(--paper);
+    background: var(--ink);
+    padding: 0.5rem 1rem 0.55rem;
+    margin-bottom: 1.4rem;
+    border-radius: 6px;
+    transform: rotate(-1.3deg);
+    box-shadow: 3px 3px 0 var(--mint);
 }
 
 .projet-section-text {
