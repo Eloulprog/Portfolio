@@ -1327,6 +1327,9 @@ section.mid  .dual-title .hw { color: var(--teal); }
 @media (prefers-reduced-motion: reduce) {
     .tv-card { opacity: 1; transform: none !important; }
     .tv-node--pulse::after { animation: none; }
+    .typing-cursor { display: none; }
+    .badge-dot { animation: none; }
+    .strip-track { animation: none !important; }
 }
 
 /* ═══════════════════════════════════════════════

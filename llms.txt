@@ -1,0 +1,34 @@
+# Elouen Le Pendeven
+
+> Portfolio d'Elouen Le Pendeven, étudiant en BUT MMI (Métiers du Multimédia et de l'Internet). Spécialités : communication digitale, UI/UX design, design graphique, vidéo, motion design et développement web. À la recherche d'une alternance en communication et marketing digital.
+
+## À propos
+- Nom : Elouen Le Pendeven
+- Statut : Étudiant en BUT MMI — IUT de Lannion, en alternance à l'IUT de Vannes (Assistant Communication & Multimédia)
+- Recherche : alternance en communication / marketing digital
+- Contact : elouen.lependeven.pro@gmail.com
+
+## Compétences
+- Communication digitale & community management
+- UI/UX design (Figma, wireframing, prototypage, design system)
+- Design graphique (Photoshop, Illustrator, Affinity, Lightroom)
+- Vidéo & motion design (After Effects, Premiere Pro, DaVinci Resolve)
+- Développement web (HTML, CSS, JavaScript)
+
+## Pages principales
+- [Accueil / Portfolio](https://elouenlependeven.com/): présentation, compétences, projets, parcours, contact
+- [CV (PDF)](https://elouenlependeven.com/CV_Elouen_Le_Pendeven.pdf)
+
+## Projets
+- [Shift — média automobile](https://elouenlependeven.com/projets/shift.html)
+- [MailSense — UX/UI](https://elouenlependeven.com/projets/mailsense.html)
+- [RadioWave](https://elouenlependeven.com/projets/radiowave.html)
+- [Roz Trégor](https://elouenlependeven.com/projets/roz-tregor.html)
+- [Les 12 Coups de MMI](https://elouenlependeven.com/projets/12-coups-mmi.html)
+- [Demain la pêche](https://elouenlependeven.com/projets/demain-peche.html)
+- [À l'West Fest](https://elouenlependeven.com/projets/alwestfest.html)
+- [Diorama Harry Potter](https://elouenlependeven.com/projets/diorama-harry-potter.html)
+- [Éducation pêche](https://elouenlependeven.com/projets/education-peche.html)
+- [Fishing Day](https://elouenlependeven.com/projets/fishing-day.html)
+- [Nature & pêche](https://elouenlependeven.com/projets/nature-peche.html)
+- [A Broad Newscast (TV show)](https://elouenlependeven.com/projets/tv-show.html)

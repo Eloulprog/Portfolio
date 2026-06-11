@@ -52,7 +52,12 @@ function type() {
         setTimeout(type, 70 + Math.random() * 30);
     }
 }
-setTimeout(type, 1000);
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    // Accessibilité : pas d'animation de frappe, texte statique
+    if (typingEl) typingEl.textContent = 'UX/UI designer, community manager & concepteur multimédia';
+} else {
+    setTimeout(type, 1000);
+}
 
 /* ═══════════════════════════════════════════════
    SCROLL REVEAL
