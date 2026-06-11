@@ -290,29 +290,14 @@ initSkillsTabs();
     loop();
 })();
 
-/* ═════════ ALTERNANCE SECTIONS — indicateur + flash ═════════ */
+/* ═════════ ALTERNANCE SECTIONS — indicateur ═════════ */
 (function () {
     const sections = Array.from(document.querySelectorAll('section[data-sec]'));
     if (!sections.length) return;
 
     const dots   = Array.from(document.querySelectorAll('.si-dot'));
-    const flash  = document.getElementById('secFlash');
-    const sfNum  = document.getElementById('sfNum');
-    const sfName = document.getElementById('sfName');
-
-    const META = {
-        hero:        { num: '00', name: 'Accueil' },
-        about:       { num: '01', name: 'Qui suis-je' },
-        competences: { num: '02', name: 'Compétences' },
-        outils:      { num: '03', name: 'Outils' },
-        projets:     { num: '04', name: 'Projets' },
-        parcours:    { num: '05', name: 'Parcours' },
-        contact:     { num: '06', name: 'Contact' }
-    };
 
     let current = 'hero';
-    let flashTimer = null;
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function setActive(name) {
         if (name === current) return;
@@ -326,15 +311,6 @@ initSkillsTabs();
             d.classList.toggle('is-active', d.dataset.jump === name);
             d.classList.toggle('is-passed', i >= 0 && idx >= 0 && i < idx);
         });
-
-        // Flash : seulement si pas hero, et pas en reduced-motion
-        if (name !== 'hero' && !reduceMotion && META[name]) {
-            sfNum.textContent  = META[name].num;
-            sfName.textContent = META[name].name;
-            flash.classList.add('is-show');
-            clearTimeout(flashTimer);
-            flashTimer = setTimeout(() => flash.classList.remove('is-show'), 750);
-        }
     }
 
     const io = new IntersectionObserver((entries) => {

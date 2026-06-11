@@ -1847,33 +1847,6 @@ body[data-section="hero"] .sec-indicator { opacity: 0; pointer-events: none; }
     .si-tip { display: none; }
 }
 
-/* ═══════════════ FLASH DE RUBRIQUE ═══════════════ */
-.sec-flash {
-    position: fixed;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex; align-items: baseline; gap: 1rem;
-    pointer-events: none;
-    z-index: 850;
-    opacity: 0;
-    transition: opacity 0.45s ease;
-    mix-blend-mode: difference;
-}
-.sec-flash.is-show { opacity: 1; }
-.sf-num {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(4rem, 14vw, 11rem);
-    font-weight: 800; line-height: 1;
-    color: #F7FBFA; letter-spacing: -0.06em;
-}
-.sf-name {
-    font-family: 'Caveat', cursive;
-    font-size: clamp(2rem, 6vw, 4.5rem);
-    font-weight: 600;
-    color: var(--section-accent, #2DD4BF);
-    letter-spacing: -0.01em;
-}
-
 @media (prefers-reduced-motion: reduce) {
-    section[data-sec], .si-dot, .sec-flash { transition: none; }
+    section[data-sec], .si-dot { transition: none; }
 }
