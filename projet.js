@@ -34,7 +34,24 @@
         toolsEl.appendChild(chip);
     });
 
-    document.getElementById('projet-cat').textContent      = projet.category.join(', ');
+    const catLabel = id => {
+        const found = (typeof PROJECT_CATEGORIES !== 'undefined')
+            && PROJECT_CATEGORIES.find(c => c.id === id);
+        return found ? found.label : id;
+    };
+    /* On retire 'iut' : déjà affiché dans le bloc Contexte juste en dessous */
+    const catEl = document.getElementById('projet-cat');
+    const cats  = projet.category.filter(id => id !== 'iut');
+    if (cats.length) {
+        cats.forEach(id => {
+            const chip = document.createElement('span');
+            chip.className = 'projet-cat-chip';
+            chip.textContent = catLabel(id);
+            catEl.appendChild(chip);
+        });
+    } else {
+        catEl.closest('.projet-aside-block').style.display = 'none';
+    }
     document.getElementById('projet-stat-val').textContent = projet.status || '—';
 
     if (projet.label) {
@@ -42,6 +59,23 @@
         if (labelBlock) {
             labelBlock.style.display = '';
             document.getElementById('projet-label-val').textContent = projet.label;
+        }
+    }
+
+    if (projet.feat && projet.feat.length) {
+        const featBlock = document.getElementById('projet-feat-block');
+        const featEl = document.getElementById('projet-feat');
+        if (featBlock && featEl) {
+            featBlock.style.display = '';
+            projet.feat.forEach(person => {
+                const a = document.createElement('a');
+                a.className = 'projet-feat-link';
+                a.href = person.href;
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+                a.innerHTML = `${person.name} <span aria-hidden="true">↗</span>`;
+                featEl.appendChild(a);
+            });
         }
     }
 
@@ -70,27 +104,53 @@
             videos.forEach(v => {
                 const url = typeof v === 'string' ? v : v.url;
                 const caption = (typeof v === 'object' && v.label) ? v.label : '';
-                const isFigma = /figma\.com/.test(url);
+                const isFigma   = /figma\.com/.test(url);
+                const isYoutube = /youtube\.com|youtu\.be/.test(url);
+                const loadLabel = isFigma   ? 'Charger le prototype'
+                                : isYoutube ? 'Lire la vidéo'
+                                :             'Charger le contenu';
+
                 const frame = document.createElement('div');
                 frame.className = 'projet-visual-inner projet-visual-video' + (isFigma ? ' projet-visual-figma' : '');
-                frame.innerHTML = `
-                    ${isFigma ? `
-                        <div class="figma-chrome">
-                            <span class="figma-chrome-dot"></span>
-                            <span class="figma-chrome-dot"></span>
-                            <span class="figma-chrome-dot"></span>
-                            <span class="figma-chrome-label">Prototype Figma</span>
-                            <a class="figma-chrome-expand" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir en plein écran">↗</a>
-                        </div>
-                    ` : ''}
-                    <iframe
-                        src="${url}"
-                        title="${projet.title}${caption ? ' — ' + caption : ''}"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen></iframe>
-                `;
+
+                const chrome = isFigma ? `
+                    <div class="figma-chrome">
+                        <span class="figma-chrome-dot"></span>
+                        <span class="figma-chrome-dot"></span>
+                        <span class="figma-chrome-dot"></span>
+                        <span class="figma-chrome-label">Prototype Figma</span>
+                        <a class="figma-chrome-expand" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir en plein écran">↗</a>
+                    </div>` : '';
+                const posterImg = projet.image
+                    ? `<img class="embed-poster-img" src="${projet.image}" alt="" loading="lazy">`
+                    : '';
+
+                /* Click-to-load : on ne charge l'iframe (souvent plusieurs Mo + cookies tiers)
+                   qu'au clic. Le poster occupe déjà la taille finale → pas de décalage (CLS). */
+                frame.innerHTML = chrome + `
+                    <button class="embed-poster" type="button" aria-label="${loadLabel}">
+                        ${posterImg}
+                        <span class="embed-poster-cta">
+                            <span class="embed-poster-icon" aria-hidden="true">${isYoutube ? '▶' : '↗'}</span>
+                            ${loadLabel}
+                        </span>
+                        <span class="embed-poster-hint">Contenu externe chargé au clic</span>
+                    </button>`;
+
+                const poster = frame.querySelector('.embed-poster');
+                poster.addEventListener('click', () => {
+                    let src = url;
+                    if (isYoutube) src += (src.includes('?') ? '&' : '?') + 'autoplay=1';
+                    const iframe = document.createElement('iframe');
+                    iframe.src = src;
+                    iframe.title = projet.title + (caption ? ' — ' + caption : '');
+                    iframe.setAttribute('frameborder', '0');
+                    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+                    iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+                    iframe.allowFullscreen = true;
+                    poster.replaceWith(iframe);
+                });
+
                 wrap.appendChild(frame);
                 if (caption) {
                     const cap = document.createElement('p');

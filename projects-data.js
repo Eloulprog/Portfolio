@@ -16,6 +16,10 @@ const PROJECTS = [
         tools:     ['Canon 90D', 'Micros DJI', 'Drone DJI Mini 3 Pro', 'Mixette H4', 'Interview', 'Tournage documentaire', 'Storyboard', 'Plans de coupe'],
         thumb:     'pt-1',
         image:     'Images/PREVIEW/View_DEMMAIN.png',
+        feat:      [
+            { name: 'Ewen Lindor',      href: 'https://ewenlindor.fr' },
+            { name: 'Ethan Lallauret',  href: 'https://www.ethanlallauret.fr' },
+        ],
         video:     'https://www.youtube.com/embed/2GS1XvzpksQ?list=PLM8AYv9xW4JyLqnWTIopKbpchLx04NqOY',
         status:    'Réalisé',
         date:      '2025',
@@ -33,6 +37,19 @@ const PROJECTS = [
         tools:     ['Écriture journalistique', 'Présentation radio', 'Conférence de rédaction', 'Duplex audio', 'Recherche d\'informations', 'Travail d\'équipe', 'Bemymedia'],
         thumb:     'pt-2',
         image:     'Images/PREVIEW/View_RW.png',
+        feat:      [
+            { name: 'Ethan Lallauret',  href: 'https://www.ethanlallauret.fr' },
+            { name: 'Emma Texier',      href: 'https://www.emmatexier.fr/index.html' },
+            { name: 'Ewen Lindor',      href: 'https://ewenlindor.fr' },
+            { name: 'Roxane Omnes',     href: 'https://www.behance.net/gallery/247513745/Portfolio-communication' },
+            { name: 'Vince Linise',     href: 'https://vincelinise.com' },
+            { name: 'Rachel Le Saux',   href: 'https://www.linkedin.com/in/rachel-le-saux-20a75626b/' },
+            { name: 'Valentin Samson',  href: 'https://valentinsamson.fr' },
+            { name: 'Enzo Le Vourc\'h', href: 'https://enzolevourch.github.io' },
+            { name: 'Juliette Goujon',  href: 'https://juliettegoujon.artstation.com' },
+            { name: 'Timéo Devos',      href: 'https://www.linkedin.com/in/timéo-devos/' },
+            { name: 'Martin Aballéa',   href: 'https://www.linkedin.com/in/martin-aballéa-b06596290/' },
+        ],
         videos:    [
             { url: 'https://www.youtube.com/embed/ViqLSV_xTZs', label: 'Le journal radio' },
             { url: 'https://www.youtube.com/embed/KcFCA1V1R3M', label: 'Coulisses (réalisé par deux camarades)' },
@@ -53,6 +70,9 @@ const PROJECTS = [
         tools:     ['Écriture multimédia', 'Ligne éditoriale', 'Stratégie réseaux sociaux', 'Instagram', 'Magazine en ligne', 'Rédaction web', 'Identité de média'],
         thumb:     'pt-3',
         image:     'Images/PREVIEW/Logo_SHIFT.jpg',
+        feat:      [
+            { name: 'Kiéran Le Troadec', href: 'https://portfolio-kieran.vercel.app' },
+        ],
         video:     'https://read.bookcreator.com/mF-YL8pWtAvYMLnms6ebwjBRIyOYa-oNpK0rA2ScFwU/PzKVluZJSkaFfFT2xB0oDg/yGAJwvRET0iX93jOoGSINA',
         links:     [
             { label: 'Instagram @shift.jv', href: 'https://www.instagram.com/shift.jv/' },
@@ -73,6 +93,9 @@ const PROJECTS = [
         tools:     ['UX Design', 'Benchmark', 'Design thinking', 'User Journey Map', 'Figma', 'Analyse fonctionnelle', 'Éco-conception numérique'],
         thumb:     'pt-4',
         image:     'Images/PREVIEW/View_MAILSENSE.png',
+        feat:      [
+            { name: 'Ethan Lallauret', href: 'https://www.ethanlallauret.fr' },
+        ],
         video:     'https://www.figma.com/embed?embed_host=share&url=' + encodeURIComponent('https://www.figma.com/proto/AjZ3eh4gg7lDRAUaqw3sM7/R4.03-GMAIL?node-id=7-307&viewport=271%2C310%2C0.05&t=6a9RKOJHXplGQx0D-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=7%3A307&page-id=0%3A1'),
         links:     [
             { label: 'Ouvrir le prototype Figma', href: 'https://www.figma.com/proto/AjZ3eh4gg7lDRAUaqw3sM7/R4.03-GMAIL?node-id=7-307&starting-point-node-id=7%3A307' },
@@ -93,6 +116,9 @@ const PROJECTS = [
         tools:     ['Figma', 'Wireframe', 'Design system', 'UX/UI', 'Benchmark'],
         thumb:     'pt-1',
         image:     'Images/PREVIEW/View_ROZ.png',
+        feat:      [
+            { name: 'Alban Desbordes', href: 'https://www.linkedin.com/in/alban-desbordes/' },
+        ],
         video:     'https://www.figma.com/embed?embed_host=share&url=' + encodeURIComponent('https://www.figma.com/proto/ngaseYepCZVQUHlTGz7yc2/ROZ-Culture?node-id=33-569&viewport=116%2C490%2C0.14&t=yvJhnRQ6DhFR1Gm7-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=33%3A569&show-proto-sidebar=1&page-id=0%3A1'),
         links:     [
             { label: 'Ouvrir le prototype Figma', href: 'https://www.figma.com/proto/ngaseYepCZVQUHlTGz7yc2/ROZ-Culture?node-id=33-569&starting-point-node-id=33%3A569' },
@@ -113,6 +139,9 @@ const PROJECTS = [
         tools:     ['Unity', 'Meta Quest 3', 'Réalité virtuelle', 'UX', 'Cahier des charges', 'Questionnaire utilisateur', 'Grille d\'observation', 'Gestion de projet'],
         thumb:     'pt-2',
         image:     'Images/PREVIEW/View_12COUPSpng.png',
+        feat:      [
+            { name: 'Ethan Lallauret', href: 'https://www.ethanlallauret.fr' },
+        ],
         status:    'Réalisé',
         date:      '2026',
     },
