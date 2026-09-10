@@ -29,14 +29,24 @@
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="/fonts/fonts.css">
     <link rel="stylesheet" href="projects-common.css">
 </head>
+<!-- Icônes Font Awesome Free 6.6.0 — CC BY 4.0 — fontawesome.com/license/free
+     Sprite local : seules les icônes de cette page, au lieu de la feuille
+     de style complète chargée depuis un CDN tiers. -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<symbol id="i-arrow-left" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 448 512"><path d="M96 32l0 32L48 64C21.5 64 0 85.5 0 112l0 48 448 0 0-48c0-26.5-21.5-48-48-48l-48 0 0-32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 32L160 64l0-32c0-17.7-14.3-32-32-32S96 14.3 96 32zM448 192L0 192 0 464c0 26.5 21.5 48 48 48l352 0c26.5 0 48-21.5 48-48l0-272z"/></symbol>
+<symbol id="i-camera" viewBox="0 0 512 512"><path d="M149.1 64.8L138.7 96 64 96C28.7 96 0 124.7 0 160L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64l-74.7 0L362.9 64.8C356.4 45.2 338.1 32 317.4 32L194.6 32c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></symbol>
+<symbol id="i-compass" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></symbol>
+<symbol id="i-film" viewBox="0 0 512 512"><path d="M0 96C0 60.7 28.7 32 64 32l384 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM48 368l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM48 240l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM48 112l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16L64 96c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM160 128l0 64c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32L192 96c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32l-128 0z"/></symbol>
+<symbol id="i-images" viewBox="0 0 576 512"><path d="M160 32c-35.3 0-64 28.7-64 64l0 224c0 35.3 28.7 64 64 64l352 0c35.3 0 64-28.7 64-64l0-224c0-35.3-28.7-64-64-64L160 32zM396 138.7l96 144c4.9 7.4 5.4 16.8 1.2 24.6S480.9 320 472 320l-144 0-48 0-80 0c-9.2 0-17.6-5.3-21.6-13.6s-2.9-18.2 2.9-25.4l64-80c4.6-5.7 11.4-9 18.7-9s14.2 3.3 18.7 9l17.3 21.6 56-84C360.5 132 368 128 376 128s15.5 4 20 10.7zM192 128a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120L0 344c0 75.1 60.9 136 136 136l320 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-320 0c-48.6 0-88-39.4-88-88l0-224z"/></symbol>
+<symbol id="i-video" viewBox="0 0 576 512"><path d="M0 128C0 92.7 28.7 64 64 64l256 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2l0 256c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1l0-17.1 0-128 0-17.1 14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></symbol>
+<symbol id="i-water" viewBox="0 0 576 512"><path d="M269.5 69.9c11.1-7.9 25.9-7.9 37 0C329 85.4 356.5 96 384 96c26.9 0 55.4-10.8 77.4-26.1c0 0 0 0 0 0c11.9-8.5 28.1-7.8 39.2 1.7c14.4 11.9 32.5 21 50.6 25.2c17.2 4 27.9 21.2 23.9 38.4s-21.2 27.9-38.4 23.9c-24.5-5.7-44.9-16.5-58.2-25C449.5 149.7 417 160 384 160c-31.9 0-60.6-9.9-80.4-18.9c-5.8-2.7-11.1-5.3-15.6-7.7c-4.5 2.4-9.7 5.1-15.6 7.7c-19.8 9-48.5 18.9-80.4 18.9c-33 0-65.5-10.3-94.5-25.8c-13.4 8.4-33.7 19.3-58.2 25c-17.2 4-34.4-6.7-38.4-23.9s6.7-34.4 23.9-38.4C42.8 92.6 61 83.5 75.3 71.6c11.1-9.5 27.3-10.1 39.2-1.7c0 0 0 0 0 0C136.7 85.2 165.1 96 192 96c27.5 0 55-10.6 77.5-26.1zm37 288C329 373.4 356.5 384 384 384c26.9 0 55.4-10.8 77.4-26.1c0 0 0 0 0 0c11.9-8.5 28.1-7.8 39.2 1.7c14.4 11.9 32.5 21 50.6 25.2c17.2 4 27.9 21.2 23.9 38.4s-21.2 27.9-38.4 23.9c-24.5-5.7-44.9-16.5-58.2-25C449.5 437.7 417 448 384 448c-31.9 0-60.6-9.9-80.4-18.9c-5.8-2.7-11.1-5.3-15.6-7.7c-4.5 2.4-9.7 5.1-15.6 7.7c-19.8 9-48.5 18.9-80.4 18.9c-33 0-65.5-10.3-94.5-25.8c-13.4 8.4-33.7 19.3-58.2 25c-17.2 4-34.4-6.7-38.4-23.9s6.7-34.4 23.9-38.4c18.1-4.2 36.2-13.3 50.6-25.2c11.1-9.4 27.3-10.1 39.2-1.7c0 0 0 0 0 0C136.7 373.2 165.1 384 192 384c27.5 0 55-10.6 77.5-26.1c11.1-7.9 25.9-7.9 37 0zm0-144C329 229.4 356.5 240 384 240c26.9 0 55.4-10.8 77.4-26.1c0 0 0 0 0 0c11.9-8.5 28.1-7.8 39.2 1.7c14.4 11.9 32.5 21 50.6 25.2c17.2 4 27.9 21.2 23.9 38.4s-21.2 27.9-38.4 23.9c-24.5-5.7-44.9-16.5-58.2-25C449.5 293.7 417 304 384 304c-31.9 0-60.6-9.9-80.4-18.9c-5.8-2.7-11.1-5.3-15.6-7.7c-4.5 2.4-9.7 5.1-15.6 7.7c-19.8 9-48.5 18.9-80.4 18.9c-33 0-65.5-10.3-94.5-25.8c-13.4 8.4-33.7 19.3-58.2 25c-17.2 4-34.4-6.7-38.4-23.9s6.7-34.4 23.9-38.4c18.1-4.2 36.2-13.3 50.6-25.2c11.1-9.5 27.3-10.1 39.2-1.7c0 0 0 0 0 0C136.7 229.2 165.1 240 192 240c27.5 0 55-10.6 77.5-26.1c11.1-7.9 25.9-7.9 37 0z"/></symbol>
+</svg>
 <body class="project-page theme-documentary">
-    <a href="../index.html#projets" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+    <a href="../index.html#projets" class="back-link"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg> Retour aux projets</a>
 
     <header class="project-hero">
         <div class="project-hero-grid">
@@ -44,16 +54,16 @@
                 <img src="../Images/Asso.webp" alt="Projet documentaire L'éducation par la pêche">
             </figure>
             <div class="project-hero-panel">
-                <div class="project-kicker"><i class="fas fa-video"></i> Mini-documentaire</div>
+                <div class="project-kicker"><svg class="icon" aria-hidden="true"><use href="#i-video"></use></svg> Mini-documentaire</div>
                 <h1 class="project-title">L'éducation par la pêche</h1>
                 <p class="project-lead">
                     Un projet pensé pour montrer la transmission et le rapport au milieu avec retenue, en laissant les
                     gestes, les silences et la présence sur le terrain faire le travail.
                 </p>
                 <div class="project-meta">
-                    <span><i class="fas fa-calendar"></i> 2024</span>
-                    <span><i class="fas fa-water"></i> Documentaire, interview, terrain</span>
-                    <span><i class="fas fa-camera"></i> Réalisation, cadre, montage</span>
+                    <span><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg> 2024</span>
+                    <span><svg class="icon" aria-hidden="true"><use href="#i-water"></use></svg> Documentaire, interview, terrain</span>
+                    <span><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> Réalisation, cadre, montage</span>
                 </div>
             </div>
         </div>
@@ -64,7 +74,7 @@
             <div class="project-summary-grid">
                 <div>
                     <div class="section-intro">
-                        <span class="section-eyebrow"><i class="fas fa-compass"></i> Contexte</span>
+                        <span class="section-eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-compass"></use></svg> Contexte</span>
                         <h2>Un documentaire qui laisse respirer le sujet</h2>
                     </div>
                     <p>
@@ -99,7 +109,7 @@
                 </div>
                 <div class="project-feature-copy">
                     <div class="section-intro">
-                        <span class="section-eyebrow"><i class="fas fa-film"></i> Réalisation</span>
+                        <span class="section-eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-film"></use></svg> Réalisation</span>
                         <h2>Laisser le terrain porter le récit</h2>
                     </div>
                     <p>
@@ -121,7 +131,7 @@
 
         <section class="project-section">
             <div class="section-intro">
-                <span class="section-eyebrow"><i class="fas fa-images"></i> Images</span>
+                <span class="section-eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-images"></use></svg> Images</span>
                 <h2>Repères visuels du projet</h2>
             </div>
             <div class="project-media-grid">
@@ -161,6 +171,11 @@
                 <a href="nature-peche.html" class="next-project-title">Nature & pêche</a>
             </div>
             <p class="footer-copy">Un autre projet de terrain, mais avec une approche plus éditoriale et plus construite visuellement.</p>
+            <p class="footer-legal">
+                <a href="/mentions-legales.html">Mentions légales</a>
+                <span aria-hidden="true">·</span>
+                <a href="/confidentialite.html">Confidentialité</a>
+            </p>
         </div>
     </footer>
 

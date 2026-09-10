@@ -29,14 +29,24 @@
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="/fonts/fonts.css">
     <link rel="stylesheet" href="projects-common.css">
 </head>
+<!-- Icônes Font Awesome Free 6.6.0 — CC BY 4.0 — fontawesome.com/license/free
+     Sprite local : seules les icônes de cette page, au lieu de la feuille
+     de style complète chargée depuis un CDN tiers. -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<symbol id="i-arrow-left" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></symbol>
+<symbol id="i-book-open" viewBox="0 0 576 512"><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5l0-377.4c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8L0 454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5l0-370.3c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11L304 456c0 11.4 11.7 19.3 22.4 15.5z"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 448 512"><path d="M96 32l0 32L48 64C21.5 64 0 85.5 0 112l0 48 448 0 0-48c0-26.5-21.5-48-48-48l-48 0 0-32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 32L160 64l0-32c0-17.7-14.3-32-32-32S96 14.3 96 32zM448 192L0 192 0 464c0 26.5 21.5 48 48 48l352 0c26.5 0 48-21.5 48-48l0-272z"/></symbol>
+<symbol id="i-camera-retro" viewBox="0 0 512 512"><path d="M220.6 121.2L271.1 96 448 96l0 96-114.8 0c-21.9-15.1-48.5-24-77.2-24s-55.2 8.9-77.2 24L64 192l0-64 128 0c9.9 0 19.7-2.3 28.6-6.8zM0 128L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L271.1 32c-9.9 0-19.7 2.3-28.6 6.8L192 64l-32 0 0-16c0-8.8-7.2-16-16-16L80 32c-8.8 0-16 7.2-16 16l0 16C28.7 64 0 92.7 0 128zM168 304a88 88 0 1 1 176 0 88 88 0 1 1 -176 0z"/></symbol>
+<symbol id="i-compass" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></symbol>
+<symbol id="i-images" viewBox="0 0 576 512"><path d="M160 32c-35.3 0-64 28.7-64 64l0 224c0 35.3 28.7 64 64 64l352 0c35.3 0 64-28.7 64-64l0-224c0-35.3-28.7-64-64-64L160 32zM396 138.7l96 144c4.9 7.4 5.4 16.8 1.2 24.6S480.9 320 472 320l-144 0-48 0-80 0c-9.2 0-17.6-5.3-21.6-13.6s-2.9-18.2 2.9-25.4l64-80c4.6-5.7 11.4-9 18.7-9s14.2 3.3 18.7 9l17.3 21.6 56-84C360.5 132 368 128 376 128s15.5 4 20 10.7zM192 128a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120L0 344c0 75.1 60.9 136 136 136l320 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-320 0c-48.6 0-88-39.4-88-88l0-224z"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 512 512"><path d="M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5l88 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-16 0-72 0s0 0 0 0c-16.6 0-32.7 1.9-48.3 5.4c-25.9 5.9-49.9 16.4-71.4 30.7c0 0 0 0 0 0C38.3 298.8 0 364.9 0 440l0 16c0 13.3 10.7 24 24 24s24-10.7 24-24l0-16c0-48.7 20.7-92.5 53.8-123.2C121.6 392.3 190.3 448 272 448l1 0c132.1-.7 239-130.9 239-291.4c0-42.6-7.5-83.1-21.1-119.6c-2.6-6.9-12.7-6.6-16.2-.1C455.9 72.1 418.7 96 376 96L272 96z"/></symbol>
+<symbol id="i-pen-ruler" viewBox="0 0 512 512"><path d="M469.3 19.3l23.4 23.4c25 25 25 65.5 0 90.5l-56.4 56.4L322.3 75.7l56.4-56.4c25-25 65.5-25 90.5 0zM44.9 353.2L299.7 98.3 413.7 212.3 158.8 467.1c-6.7 6.7-15.1 11.6-24.2 14.2l-104 29.7c-8.4 2.4-17.4 .1-23.6-6.1s-8.5-15.2-6.1-23.6l29.7-104c2.6-9.2 7.5-17.5 14.2-24.2zM249.4 103.4L103.4 249.4 16 161.9c-18.7-18.7-18.7-49.1 0-67.9L94.1 16c18.7-18.7 49.1-18.7 67.9 0l19.8 19.8c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1l45.1 45.1zM408.6 262.6l45.1 45.1c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1L496 350.1c18.7 18.7 18.7 49.1 0 67.9L417.9 496c-18.7 18.7-49.1 18.7-67.9 0l-87.4-87.4L408.6 262.6z"/></symbol>
+</svg>
 <body class="project-page theme-editorial">
-    <a href="../index.html#projets" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+    <a href="../index.html#projets" class="back-link"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg> Retour aux projets</a>
 
     <header class="project-hero">
         <div class="project-hero-grid">
@@ -44,16 +54,16 @@
                 <img src="../Images/Asso.webp" alt="Projet Nature et pêche">
             </figure>
             <div class="project-hero-panel">
-                <div class="project-kicker"><i class="fas fa-leaf"></i> Image associative</div>
+                <div class="project-kicker"><svg class="icon" aria-hidden="true"><use href="#i-leaf"></use></svg> Image associative</div>
                 <h1 class="project-title">Nature & pêche</h1>
                 <p class="project-lead">
                     Un travail de valorisation éditoriale pour montrer une association de terrain avec plus d'air,
                     plus de justesse et une image plus contemporaine.
                 </p>
                 <div class="project-meta">
-                    <span><i class="fas fa-calendar"></i> 2024</span>
-                    <span><i class="fas fa-book-open"></i> Éditorial et valorisation</span>
-                    <span><i class="fas fa-camera-retro"></i> Direction artistique et photo</span>
+                    <span><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg> 2024</span>
+                    <span><svg class="icon" aria-hidden="true"><use href="#i-book-open"></use></svg> Éditorial et valorisation</span>
+                    <span><svg class="icon" aria-hidden="true"><use href="#i-camera-retro"></use></svg> Direction artistique et photo</span>
                 </div>
             </div>
         </div>
@@ -64,7 +74,7 @@
             <div class="project-summary-grid">
                 <div>
                     <div class="section-intro">
-                        <span class="section-eyebrow"><i class="fas fa-compass"></i> Contexte</span>
+                        <span class="section-eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-compass"></use></svg> Contexte</span>
                         <h2>Moderniser sans dénaturer</h2>
                     </div>
                     <p>
@@ -99,7 +109,7 @@
                 </div>
                 <div class="project-feature-copy">
                     <div class="section-intro">
-                        <span class="section-eyebrow"><i class="fas fa-pen-ruler"></i> Direction</span>
+                        <span class="section-eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-pen-ruler"></use></svg> Direction</span>
                         <h2>Donner plus d'air à l'image associative</h2>
                     </div>
                     <p>
@@ -121,7 +131,7 @@
 
         <section class="project-section">
             <div class="section-intro">
-                <span class="section-eyebrow"><i class="fas fa-images"></i> Ambiances</span>
+                <span class="section-eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-images"></use></svg> Ambiances</span>
                 <h2>Deux images qui donnent le ton</h2>
             </div>
             <div class="project-media-grid">
@@ -161,6 +171,11 @@
                 <a href="fishing-day.html" class="next-project-title">Fishing Day</a>
             </div>
             <p class="footer-copy">Un projet plus graphique et plus engagé, centré sur la sensibilisation autour de l'eau.</p>
+            <p class="footer-legal">
+                <a href="/mentions-legales.html">Mentions légales</a>
+                <span aria-hidden="true">·</span>
+                <a href="/confidentialite.html">Confidentialité</a>
+            </p>
         </div>
     </footer>
 

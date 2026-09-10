@@ -29,14 +29,24 @@
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="/fonts/fonts.css">
     <link rel="stylesheet" href="projects-common.css">
 </head>
+<!-- Icônes Font Awesome Free 6.6.0 — CC BY 4.0 — fontawesome.com/license/free
+     Sprite local : seules les icônes de cette page, au lieu de la feuille
+     de style complète chargée depuis un CDN tiers. -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<symbol id="i-arrow-left" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 448 512"><path d="M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288l111.5 0L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7l-111.5 0L349.4 44.6z"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 448 512"><path d="M96 32l0 32L48 64C21.5 64 0 85.5 0 112l0 48 448 0 0-48c0-26.5-21.5-48-48-48l-48 0 0-32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 32L160 64l0-32c0-17.7-14.3-32-32-32S96 14.3 96 32zM448 192L0 192 0 464c0 26.5 21.5 48 48 48l352 0c26.5 0 48-21.5 48-48l0-272z"/></symbol>
+<symbol id="i-compass" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></symbol>
+<symbol id="i-images" viewBox="0 0 576 512"><path d="M160 32c-35.3 0-64 28.7-64 64l0 224c0 35.3 28.7 64 64 64l352 0c35.3 0 64-28.7 64-64l0-224c0-35.3-28.7-64-64-64L160 32zM396 138.7l96 144c4.9 7.4 5.4 16.8 1.2 24.6S480.9 320 472 320l-144 0-48 0-80 0c-9.2 0-17.6-5.3-21.6-13.6s-2.9-18.2 2.9-25.4l64-80c4.6-5.7 11.4-9 18.7-9s14.2 3.3 18.7 9l17.3 21.6 56-84C360.5 132 368 128 376 128s15.5 4 20 10.7zM192 128a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120L0 344c0 75.1 60.9 136 136 136l320 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-320 0c-48.6 0-88-39.4-88-88l0-224z"/></symbol>
+<symbol id="i-layer-group" viewBox="0 0 576 512"><path d="M264.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 149.8C37.4 145.8 32 137.3 32 128s5.4-17.9 13.9-21.8L264.5 5.2zM476.9 209.6l53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 277.8C37.4 273.8 32 265.3 32 256s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0l152-70.2zm-152 198.2l152-70.2 53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 405.8C37.4 401.8 32 393.3 32 384s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0z"/></symbol>
+<symbol id="i-pen-ruler" viewBox="0 0 512 512"><path d="M469.3 19.3l23.4 23.4c25 25 25 65.5 0 90.5l-56.4 56.4L322.3 75.7l56.4-56.4c25-25 65.5-25 90.5 0zM44.9 353.2L299.7 98.3 413.7 212.3 158.8 467.1c-6.7 6.7-15.1 11.6-24.2 14.2l-104 29.7c-8.4 2.4-17.4 .1-23.6-6.1s-8.5-15.2-6.1-23.6l29.7-104c2.6-9.2 7.5-17.5 14.2-24.2zM249.4 103.4L103.4 249.4 16 161.9c-18.7-18.7-18.7-49.1 0-67.9L94.1 16c18.7-18.7 49.1-18.7 67.9 0l19.8 19.8c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1l45.1 45.1zM408.6 262.6l45.1 45.1c-.3 .3-.7 .6-1 .9l-64 64c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l64-64c.3-.3 .6-.7 .9-1L496 350.1c18.7 18.7 18.7 49.1 0 67.9L417.9 496c-18.7 18.7-49.1 18.7-67.9 0l-87.4-87.4L408.6 262.6z"/></symbol>
+<symbol id="i-user-pen" viewBox="0 0 640 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l293.1 0c-3.1-8.8-3.7-18.4-1.4-27.8l15-60.1c2.8-11.3 8.6-21.5 16.8-29.7l40.3-40.3c-32.1-31-75.7-50.1-123.9-50.1l-91.4 0zm435.5-68.3c-15.6-15.6-40.9-15.6-56.6 0l-29.4 29.4 71 71 29.4-29.4c15.6-15.6 15.6-40.9 0-56.6l-14.4-14.4zM375.9 417c-4.1 4.1-7 9.2-8.4 14.9l-15 60.1c-1.4 5.5 .2 11.2 4.2 15.2s9.7 5.6 15.2 4.2l60.1-15c5.6-1.4 10.8-4.3 14.9-8.4L576.1 358.7l-71-71L375.9 417z"/></symbol>
+</svg>
 <body class="project-page theme-festival">
-    <a href="../index.html#projets" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+    <a href="../index.html#projets" class="back-link"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"></use></svg> Retour aux projets</a>
 
     <header class="project-hero">
         <div class="project-hero-grid">
@@ -44,16 +54,16 @@
                 <img src="../Images/aff_festivalMMI.webp" alt="Affiche du projet À l'West Fest">
             </figure>
             <div class="project-hero-panel">
-                <div class="project-kicker"><i class="fas fa-bolt"></i> Identité visuelle</div>
+                <div class="project-kicker"><svg class="icon" aria-hidden="true"><use href="#i-bolt"></use></svg> Identité visuelle</div>
                 <h1 class="project-title">À l'West Fest</h1>
                 <p class="project-lead">
                     Une identité conçue pour installer immédiatement un ton de festival, avec assez de caractère pour
                     tenir sur l'affiche comme sur les déclinaisons digitales.
                 </p>
                 <div class="project-meta">
-                    <span><i class="fas fa-calendar"></i> 2024</span>
-                    <span><i class="fas fa-layer-group"></i> Affiche, signature, déclinaisons</span>
-                    <span><i class="fas fa-user-pen"></i> Direction graphique</span>
+                    <span><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg> 2024</span>
+                    <span><svg class="icon" aria-hidden="true"><use href="#i-layer-group"></use></svg> Affiche, signature, déclinaisons</span>
+                    <span><svg class="icon" aria-hidden="true"><use href="#i-user-pen"></use></svg> Direction graphique</span>
                 </div>
             </div>
         </div>
@@ -64,7 +74,7 @@
             <div class="project-summary-grid">
                 <div>
                     <div class="section-intro">
-                        <span class="section-eyebrow"><i class="fas fa-compass"></i> Contexte</span>
+                        <span class="section-eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-compass"></use></svg> Contexte</span>
                         <h2>Une identité pensée pour être vue vite</h2>
                     </div>
                     <p>
@@ -99,7 +109,7 @@
                 </div>
                 <div class="project-feature-copy">
                     <div class="section-intro">
-                        <span class="section-eyebrow"><i class="fas fa-pen-ruler"></i> Direction</span>
+                        <span class="section-eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-pen-ruler"></use></svg> Direction</span>
                         <h2>Faire festival sans ajouter de bruit</h2>
                     </div>
                     <p>
@@ -121,7 +131,7 @@
 
         <section class="project-section">
             <div class="section-intro">
-                <span class="section-eyebrow"><i class="fas fa-images"></i> Supports</span>
+                <span class="section-eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-images"></use></svg> Supports</span>
                 <h2>Deux éléments qui structurent l'ensemble</h2>
             </div>
             <div class="project-media-grid">
@@ -161,6 +171,11 @@
                 <a href="education-peche.html" class="next-project-title">L'éducation par la pêche</a>
             </div>
             <p class="footer-copy">Un projet plus calme et plus documentaire, centré sur la transmission et le terrain.</p>
+            <p class="footer-legal">
+                <a href="/mentions-legales.html">Mentions légales</a>
+                <span aria-hidden="true">·</span>
+                <a href="/confidentialite.html">Confidentialité</a>
+            </p>
         </div>
     </footer>
 

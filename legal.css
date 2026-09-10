@@ -1,0 +1,186 @@
+/* ═══════════════════════════════════════════════
+   PAGES LÉGALES — mentions légales, confidentialité
+   S'appuie sur les jetons de style.css (--ink, --mint, --teal…).
+═══════════════════════════════════════════════ */
+
+.legal-page { background: var(--bg); }
+
+/* style.css applique un padding vertical énorme à tout <section> :
+   on le neutralise à l'intérieur du corps de texte. */
+.legal-body section { padding: 0; }
+
+/* Le nav clair est conditionné à body[data-section], que seule index.html
+   renseigne. Le header de ces pages est sombre : sans ça, le logo reste
+   en encre foncée sur fond foncé. */
+.legal-page .nav-logo          { color: var(--paper); }
+.legal-page .nav-links a       { color: rgba(247,251,250,0.7); }
+.legal-page .nav-links a:hover { color: var(--paper); }
+.legal-page .nav-burger span   { background: var(--paper); }
+.legal-page nav.elevated {
+    background: rgba(10,42,51,0.9);
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+    box-shadow: 0 1px 0 rgba(45,212,191,0.14);
+}
+
+.legal-header {
+    background: var(--bg-dark);
+    padding: 9rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+}
+.legal-header::after {
+    content: '';
+    position: absolute;
+    width: 520px; height: 520px;
+    border-radius: 50%;
+    top: -260px; right: -140px;
+    background: radial-gradient(circle, rgba(45,212,191,0.13) 0%, transparent 70%);
+    pointer-events: none;
+}
+.legal-header .wrap { position: relative; z-index: 1; }
+
+.legal-eyebrow {
+    display: inline-flex; align-items: center; gap: 0.7rem;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--mint); margin-bottom: 1.2rem;
+}
+.legal-eyebrow::before {
+    content: ''; display: block;
+    width: 28px; height: 2px;
+    background: var(--mint); border-radius: 1px;
+}
+
+.legal-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.1rem, 5vw, 3.4rem);
+    line-height: 1.02; letter-spacing: -0.035em;
+    color: var(--paper);
+    text-wrap: balance;
+}
+.legal-title .hw {
+    font-family: 'Caveat', cursive;
+    font-weight: 700; font-size: 1.12em;
+    color: var(--mint); letter-spacing: 0.01em;
+}
+.legal-updated {
+    margin-top: 1.4rem;
+    font-size: 0.78rem;
+    color: rgba(247,251,250,0.5);
+    letter-spacing: 0.02em;
+}
+
+/* ── corps ── */
+.legal-main { padding: 3.5rem 0 5rem; }
+.legal-body { max-width: 68ch; }
+
+.legal-lede {
+    font-size: 1.02rem;
+    line-height: 1.75;
+    color: var(--ink-mid);
+    padding-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.legal-body section { margin-bottom: 2.8rem; }
+
+.legal-body h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.24rem;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 0.9rem;
+}
+.legal-body h3 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 0.96rem;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin: 1.6rem 0 0.5rem;
+}
+.legal-body p {
+    line-height: 1.78;
+    color: var(--ink-mid);
+    margin-bottom: 0.9rem;
+}
+.legal-body a:not(.btn) {
+    color: var(--teal-light);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+}
+.legal-body a:not(.btn):hover { color: var(--teal); }
+
+.legal-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+}
+.legal-body ul li {
+    position: relative;
+    padding-left: 1.3rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.72;
+    color: var(--ink-mid);
+}
+.legal-body ul li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0.72em;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--mint);
+}
+
+/* ── fiche d'identité (éditeur, hébergeur) ── */
+.legal-card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--mint);
+    border-radius: var(--r);
+    padding: 1.3rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+}
+.legal-card dl {
+    display: grid;
+    grid-template-columns: minmax(9rem, auto) 1fr;
+    gap: 0.55rem 1.4rem;
+    margin: 0;
+}
+.legal-card dt {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.66rem; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-muted);
+    padding-top: 0.2em;
+}
+.legal-card dd {
+    margin: 0;
+    color: var(--ink);
+    line-height: 1.6;
+}
+
+/* ── encart de synthèse ── */
+.legal-note {
+    background: rgba(45,212,191,0.08);
+    border: 1px solid rgba(45,212,191,0.3);
+    border-radius: var(--r);
+    padding: 1.2rem 1.4rem;
+    margin: 1.6rem 0;
+}
+.legal-note p { margin-bottom: 0; color: var(--ink); }
+.legal-note p + p { margin-top: 0.7rem; }
+.legal-note strong { font-weight: 600; }
+
+@media (max-width: 620px) {
+    .legal-header { padding: 7rem 0 3rem; }
+    .legal-card dl { grid-template-columns: 1fr; gap: 0.15rem; }
+    .legal-card dd { margin-bottom: 0.7rem; }
+}
