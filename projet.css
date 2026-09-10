@@ -425,3 +425,22 @@
     .projet-section { grid-template-columns: 1fr; gap: 0.5rem; }
     .projet-section-num { padding-top: 0; }
 }
+
+/* ═══════════════════════════════════════════════
+   NAV SUR PAGE PROJET
+   Le nav clair de la home est conditionné à body[data-section],
+   que seule index.html renseigne. Sur une page projet le header
+   est sombre : sans ces règles, le logo reste en encre foncée
+   sur fond foncé et devient illisible.
+═══════════════════════════════════════════════ */
+.projet-page .nav-logo        { color: var(--paper); }
+.projet-page .nav-links a     { color: rgba(247,251,250,0.7); }
+.projet-page .nav-links a:hover { color: var(--paper); }
+.projet-page .nav-burger span { background: var(--paper); }
+
+.projet-page nav.elevated {
+    background: rgba(10,42,51,0.9);
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+    box-shadow: 0 1px 0 rgba(45,212,191,0.14);
+}

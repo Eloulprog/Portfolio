@@ -100,7 +100,7 @@ function renderProjects() {
         const tagsHtml = p.tags.map(t => `<span class="proj-tag">${t}</span>`).join('');
         const card = document.createElement('a');
         card.className = `proj-card reveal${delay}`;
-        card.href = `projet.html?slug=${p.slug}`;
+        card.href = `projets/${p.slug}.html`;
         card.dataset.categories = p.category.join(',');
         card.innerHTML = `
             <span class="proj-num">0${i + 1}</span>
@@ -124,7 +124,7 @@ function renderProjects() {
         const tagsHtml = p.tags.map(t => `<span class="proj-grid-tag">${t}</span>`).join('');
         const card = document.createElement('a');
         card.className = `proj-grid-card reveal${delay}`;
-        card.href = `projet.html?slug=${p.slug}`;
+        card.href = `projets/${p.slug}.html`;
         card.dataset.categories = p.category.join(',');
         card.innerHTML = `
             <div class="proj-grid-thumb">
