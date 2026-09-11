@@ -38,7 +38,12 @@
     background: radial-gradient(circle, rgba(45,212,191,0.13) 0%, transparent 70%);
     pointer-events: none;
 }
-.legal-header .wrap { position: relative; z-index: 1; }
+.legal-header .wrap {
+    position: relative; z-index: 1;
+    max-width: 68ch;        /* aligné sur la colonne de texte */
+    text-align: center;
+}
+.legal-header .legal-eyebrow { justify-content: center; }
 
 .legal-eyebrow {
     display: inline-flex; align-items: center; gap: 0.7rem;
@@ -47,7 +52,8 @@
     letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--mint); margin-bottom: 1.2rem;
 }
-.legal-eyebrow::before {
+.legal-eyebrow::before,
+.legal-header .legal-eyebrow::after {
     content: ''; display: block;
     width: 28px; height: 2px;
     background: var(--mint); border-radius: 1px;
@@ -75,9 +81,13 @@
 
 /* ── corps ── */
 .legal-main { padding: 3.5rem 0 5rem; }
-.legal-body { max-width: 68ch; }
+.legal-body {
+    max-width: 68ch;
+    margin-inline: auto;   /* colonne centrée dans la page */
+}
 
 .legal-lede {
+    text-align: center;
     font-size: 1.02rem;
     line-height: 1.75;
     color: var(--ink-mid);

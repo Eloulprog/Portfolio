@@ -12,7 +12,7 @@
     --bg-dark-alt:  #0F3542;
     --ink:          #0C1F26;
     --ink-mid:      #2C4A54;
-    --ink-muted:    #6B8E98;
+    --ink-muted:    #4A6670;
     --paper:        #F7FBFA;
     --teal:         #0F4C5C;
     --teal-light:   #1A6B7F;
@@ -269,7 +269,7 @@ nav.elevated {
     font-family: 'Syne', sans-serif;
     font-size: clamp(0.9rem, 1.6vw, 1.1rem);
     font-weight: 600;
-    color: rgba(247,251,250,0.4);
+    color: rgba(247,251,250,0.55);
     letter-spacing: 0.01em;
 }
 #typing-text {
@@ -293,7 +293,7 @@ nav.elevated {
 .hero-desc {
     font-size: clamp(0.88rem, 1.2vw, 1rem);
     line-height: 1.85;
-    color: rgba(247,251,250,0.45);
+    color: rgba(247,251,250,0.6);
     max-width: 36rem;
     margin-bottom: 2.5rem;
 }
@@ -321,7 +321,7 @@ nav.elevated {
 .hero-stat-label {
     font-size: 0.58rem; font-weight: 600;
     letter-spacing: 0.12em; text-transform: uppercase;
-    color: rgba(247,251,250,0.3);
+    color: rgba(247,251,250,0.55);
     margin-top: 0.25rem;
 }
 
@@ -351,7 +351,7 @@ nav.elevated {
 .hero-scroll-label {
     font-size: 0.55rem; font-weight: 700;
     letter-spacing: 0.18em; text-transform: uppercase;
-    color: rgba(247,251,250,0.2);
+    color: rgba(247,251,250,0.5);
 }
 
 @media (max-width: 760px) {
@@ -412,7 +412,7 @@ section.teal-section {
     width: 20px; height: 2px;
     background: var(--mint); border-radius: 1px;
 }
-section.dark .s-eyebrow { color: rgba(247,251,250,0.45); }
+section.dark .s-eyebrow { color: rgba(247,251,250,0.6); }
 section.dark .s-eyebrow::before { background: var(--mint); }
 
 .dual-title {
@@ -1852,4 +1852,38 @@ body[data-section="hero"] .sec-indicator { opacity: 0; pointer-events: none; }
 
 @media (prefers-reduced-motion: reduce) {
     section[data-sec], .si-dot { transition: none; }
+}
+
+/* ═══════════════════════════════════════════════
+   CONTRASTE — accent sur fond clair (WCAG AA)
+
+   #2DD4BF donne 8,10:1 sur le fond sombre : parfait.
+   Mais 1,60:1 sur le crème #F2EDE3 des sections claires,
+   pour 4,5 requis — sur du texte de 10 px en gras.
+   --mint-ink garde la teinte et passe à 4,64:1.
+   Le mint reste inchangé partout sur fond sombre.
+═══════════════════════════════════════════════ */
+:root { --mint-ink: #12776C; }
+
+/* Titres à double typo des sections claires */
+#about[data-sec]    .dual-title .hw,
+#outils[data-sec]   .dual-title .hw,
+#parcours[data-sec] .dual-title .hw { color: var(--mint-ink); }
+
+/* Numéros de catégorie — section Outils */
+#outils[data-sec] .tools-cat-num { color: var(--mint-ink); }
+
+/* Timeline — section Parcours */
+#parcours[data-sec] .tv-year,
+#parcours[data-sec] .tv-chip,
+#parcours[data-sec] .tv-link { color: var(--mint-ink); }
+#parcours[data-sec] .tv-chip { border-color: rgba(18,119,108,0.35); }
+#parcours[data-sec] .tv-badge--mint {
+    color: var(--mint-ink);
+    border-color: rgba(18,119,108,0.45);
+}
+#parcours[data-sec] .tv-badge--accent {
+    color: #F2EDE3;
+    background: var(--mint-ink);
+    border-color: var(--mint-ink);
 }
