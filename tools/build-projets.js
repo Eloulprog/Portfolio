@@ -164,8 +164,8 @@ function page(p, prev, next) {
     <meta property="og:description" content="${esc(desc)}">
     <meta property="og:image" content="${ORIGIN}/Images/og-cover.jpg">
     <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="627">
+    <meta property="og:image:width" content="2400">
+    <meta property="og:image:height" content="1254">
     <meta property="og:image:alt" content="Elouen Le Pendeven — Portfolio : communication, audiovisuel, graphisme, web / UI-UX">
 
     <!-- Twitter Card -->
