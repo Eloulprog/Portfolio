@@ -11,37 +11,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elouenlependeven.com/projets/alwestfest.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://elouenlependeven.com/projets/demain-peche.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elouenlependeven.com/projets/diorama-harry-potter.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://elouenlependeven.com/projets/education-peche.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://elouenlependeven.com/projets/fishing-day.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://elouenlependeven.com/projets/mailsense.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://elouenlependeven.com/projets/nature-peche.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -57,11 +32,6 @@
   </url>
   <url>
     <loc>https://elouenlependeven.com/projets/shift.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://elouenlependeven.com/projets/tv-show.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
