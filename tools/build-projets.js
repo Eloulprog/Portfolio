@@ -339,7 +339,7 @@ ${(p.tools || []).map(t => `                            <span class="projet-tool
             <span class="foot-copy">© 2026 — Design &amp; Création</span>
             <ul class="foot-links">
                 <li><a href="mailto:elouen.lependeven.pro@gmail.com">Email</a></li>
-                <li><a href="/CV_Elouen_Le_Pendeven.pdf" download>CV</a></li>
+                <li><a href="/CV_Elouen_Le_Pendeven.pdf" target="_blank" rel="noopener">CV</a></li>
                 <li><a href="/mentions-legales.html">Mentions légales</a></li>
                 <li><a href="/confidentialite.html">Confidentialité</a></li>
             </ul>
