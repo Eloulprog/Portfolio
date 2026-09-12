@@ -1,11 +1,10 @@
 # Elouen Le Pendeven
 
-> Portfolio d'Elouen Le Pendeven, étudiant en BUT MMI (Métiers du Multimédia et de l'Internet). Spécialités : communication digitale, UI/UX design, design graphique, vidéo, motion design et développement web. À la recherche d'une alternance en communication et marketing digital.
+> Portfolio d'Elouen Le Pendeven, étudiant en BUT MMI (Métiers du Multimédia et de l'Internet). Spécialités : communication digitale, UI/UX design, design graphique, vidéo, motion design et développement web.
 
 ## À propos
 - Nom : Elouen Le Pendeven
 - Statut : Étudiant en BUT MMI — IUT de Lannion, en alternance à l'IUT de Vannes (Assistant Communication & Multimédia)
-- Recherche : alternance en communication / marketing digital
 - Contact : elouen.lependeven.pro@gmail.com
 
 ## Compétences
