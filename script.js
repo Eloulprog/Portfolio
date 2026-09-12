@@ -145,46 +145,6 @@ function renderProjects() {
         gridEl.appendChild(card);
     });
 
-    /* Emplacements en construction — projets à venir.
-       Volontairement des <div> et non des <a> : rien à ouvrir, donc
-       ni lien mort, ni cible clavier, ni URL à explorer pour un robot.
-       Sans data-categories, ils ne s'affichent que sur le filtre « Tous ». */
-    const SOON = 5;
-    for (let k = 0; k < SOON; k++) {
-        const num = String(PROJECTS.length + k + 1).padStart(2, '0');
-
-        const li = document.createElement('div');
-        li.className = 'proj-card proj-card--soon reveal';
-        li.innerHTML = `
-            <span class="proj-num">${num}</span>
-            <div class="proj-info">
-                <span class="proj-soon-badge">
-                    <span class="proj-soon-dot" aria-hidden="true"></span>
-                    En construction
-                </span>
-                <h3 class="proj-name">Projet en préparation</h3>
-            </div>
-            <div class="proj-thumb-col proj-thumb-col--soon" aria-hidden="true"></div>
-        `;
-        listEl.appendChild(li);
-
-        const gr = document.createElement('div');
-        gr.className = 'proj-grid-card proj-grid-card--soon reveal';
-        gr.innerHTML = `
-            <div class="proj-grid-thumb">
-                <div class="proj-grid-thumb-inner proj-grid-thumb--soon" aria-hidden="true"></div>
-            </div>
-            <div class="proj-grid-body">
-                <span class="proj-soon-badge">
-                    <span class="proj-soon-dot" aria-hidden="true"></span>
-                    En construction
-                </span>
-                <div class="proj-grid-name">Projet en préparation</div>
-            </div>
-        `;
-        gridEl.appendChild(gr);
-    }
-
     /* Observer les nouvelles cards */
     document.querySelectorAll('.proj-card, .proj-grid-card').forEach(el => io.observe(el));
 }
@@ -201,11 +161,6 @@ function applyFilter(catId) {
         const show = catId === 'all' || cats.includes(catId);
         card.classList.toggle('filtered-out', !show);
     });
-
-    /* Les emplacements en construction n'appartiennent à aucune catégorie :
-       ils n'ont de sens que sur « Tous ». */
-    document.querySelectorAll('.proj-card--soon, .proj-grid-card--soon')
-        .forEach(el => el.classList.toggle('filtered-out', catId !== 'all'));
 }
 
 /* ═══════════════════════════════════════════════
