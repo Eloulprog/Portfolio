@@ -74,6 +74,18 @@ const io = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal, .reveal-left').forEach(el => io.observe(el));
 
 /* ═══════════════════════════════════════════════
+   LAYOUT CHANGE — recalcul des ScrollTrigger
+   (toggle liste/grille et filtres changent la hauteur
+   de la page : sans refresh, les positions mémorisées
+   par GSAP deviennent fausses et la timeline "Parcours"
+   ne se déclenche plus)
+═══════════════════════════════════════════════ */
+function refreshScrollTriggers() {
+    if (!window.ScrollTrigger) return;
+    requestAnimationFrame(() => ScrollTrigger.refresh());
+}
+
+/* ═══════════════════════════════════════════════
    PROJETS — rendu dynamique depuis PROJECTS
 ═══════════════════════════════════════════════ */
 function renderProjects() {
@@ -147,6 +159,10 @@ function renderProjects() {
 
     /* Observer les nouvelles cards */
     document.querySelectorAll('.proj-card, .proj-grid-card').forEach(el => io.observe(el));
+
+    /* Les images en lazy-load modifient la hauteur de la page en arrivant */
+    document.querySelectorAll('#projects-list img, #projects-grid img')
+        .forEach(img => img.addEventListener('load', refreshScrollTriggers, { once: true }));
 }
 
 function applyFilter(catId) {
@@ -161,6 +177,8 @@ function applyFilter(catId) {
         const show = catId === 'all' || cats.includes(catId);
         card.classList.toggle('filtered-out', !show);
     });
+
+    refreshScrollTriggers();
 }
 
 /* ═══════════════════════════════════════════════
@@ -178,6 +196,7 @@ function initViewToggle() {
         btnGrid.classList.remove('active');
         listView.classList.remove('hidden');
         gridView.classList.add('hidden');
+        refreshScrollTriggers();
     });
 
     btnGrid.addEventListener('click', () => {
@@ -185,6 +204,7 @@ function initViewToggle() {
         btnList.classList.remove('active');
         gridView.classList.remove('hidden');
         listView.classList.add('hidden');
+        refreshScrollTriggers();
     });
 }
 
