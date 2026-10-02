@@ -749,12 +749,6 @@ section.mid  .dual-title .hw { color: var(--teal); }
     background: var(--c); flex-shrink: 0;
 }
 
-.sp-deco {
-    position: absolute; right: 1rem; bottom: 1rem;
-    width: 100px; height: 100px;
-    color: var(--paper); pointer-events: none;
-}
-
 @media (max-width: 780px) {
     .skills-tabs-layout {
         grid-template-columns: 1fr;
