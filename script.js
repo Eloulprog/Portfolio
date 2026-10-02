@@ -13,12 +13,14 @@ if (burger) {
     burger.addEventListener('click', () => {
         burger.classList.toggle('open');
         mobileMenu.classList.toggle('open');
+        document.body.classList.toggle('menu-open', mobileMenu.classList.contains('open'));
     });
 }
 
 function closeMobile() {
     burger && burger.classList.remove('open');
     mobileMenu && mobileMenu.classList.remove('open');
+    document.body.classList.remove('menu-open');
 }
 
 /* ═══════════════════════════════════════════════
@@ -96,8 +98,14 @@ function renderProjects() {
     const filtersEl = document.getElementById('projects-filters');
     if (!listEl || !gridEl || !filtersEl) return;
 
-    /* Filtres */
-    (PROJECT_CATEGORIES || []).forEach(cat => {
+    /* Filtres : seulement ceux qui trient vraiment
+       (au moins un projet, mais pas tous — sinon doublon de « Tous ») */
+    const countFor = id => PROJECTS.filter(p => p.category.includes(id)).length;
+    (PROJECT_CATEGORIES || []).filter(cat => {
+        if (cat.id === 'all') return true;
+        const n = countFor(cat.id);
+        return n > 0 && n < PROJECTS.length;
+    }).forEach(cat => {
         const btn = document.createElement('button');
         btn.className = 'filter-btn' + (cat.id === 'all' ? ' active' : '');
         btn.dataset.filter = cat.id;
@@ -292,7 +300,7 @@ initSkillsTabs();
             const nx = p.x / w * 3;
             const ny = p.y / h * 3;
             const angle = noise(nx, ny) * Math.PI * 2;
-            const mouseInfluence = 1 + Math.hypot(p.x / w - mx, p.y / h - my) < 0.3 ? 1.4 : 1;
+            const mouseInfluence = Math.hypot(p.x / w - mx, p.y / h - my) < 0.3 ? 1.4 : 1;
             p.vx += Math.cos(angle) * 0.08 * mouseInfluence;
             p.vy += Math.sin(angle) * 0.08 * mouseInfluence;
             p.vx *= 0.94; p.vy *= 0.94;

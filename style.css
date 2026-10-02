@@ -53,6 +53,11 @@ body::after {
 ::selection { background: var(--mint); color: var(--ink); }
 :focus-visible { outline: 2px solid var(--mint); outline-offset: 3px; }
 a { color: inherit; text-decoration: none; }
+.sr-only {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
 img { display: block; max-width: 100%; }
 
 .wrap {
@@ -157,6 +162,12 @@ nav.elevated {
     transition: color 0.2s;
 }
 .nav-mobile a:hover { color: var(--mint); }
+
+/* Menu ouvert : son fond est clair, la barre de nav doit suivre
+   (sinon logo crème et croix crème sur crème, quelle que soit la section) */
+body.menu-open #nav { background: transparent; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
+body.menu-open #nav .nav-logo { color: var(--ink); }
+body.menu-open #nav .nav-burger span { background: var(--ink); }
 
 @media (max-width: 760px) {
     .nav-links { display: none; }
@@ -378,7 +389,7 @@ nav.elevated {
     font-family: 'Syne', sans-serif;
     font-size: 0.66rem; font-weight: 700;
     letter-spacing: 0.14em; text-transform: uppercase;
-    color: rgba(247,251,250,0.6); white-space: nowrap;
+    color: rgba(247,251,250,0.72); white-space: nowrap;
 }
 .si-sep {
     width: 4px; height: 4px; border-radius: 50%;
@@ -1353,7 +1364,7 @@ section.mid  .dual-title .hw { color: var(--teal); }
     font-family: 'Syne', sans-serif;
     font-size: 0.62rem; font-weight: 700;
     letter-spacing: 0.22em; text-transform: uppercase;
-    color: rgba(247,251,250,0.35); margin-bottom: 1.2rem;
+    color: rgba(247,251,250,0.6); margin-bottom: 1.2rem;
     display: flex; align-items: center; gap: 0.8rem;
 }
 .contact-eyebrow::before { content: ''; width: 20px; height: 2px; background: var(--mint); border-radius: 1px; }
@@ -1371,7 +1382,7 @@ section.mid  .dual-title .hw { color: var(--teal); }
     display: inline-block; font-family: 'Syne', sans-serif;
     font-size: clamp(0.78rem, 1.3vw, 1rem);
     letter-spacing: 0.1em;
-    color: rgba(247,251,250,0.3); margin-bottom: 2.5rem;
+    color: rgba(247,251,250,0.7); margin-bottom: 2.5rem;
     transition: color 0.2s;
 }
 .contact-email:hover { color: var(--mint); }
@@ -1390,16 +1401,16 @@ footer {
 }
 .foot-logo {
     font-family: 'Syne', sans-serif; font-weight: 800;
-    font-size: 0.85rem; color: rgba(247,251,250,0.3);
+    font-size: 0.85rem; color: rgba(247,251,250,0.7);
     display: flex; align-items: center; gap: 0.4rem;
 }
 .foot-logo-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--mint); }
-.foot-copy { font-size: 0.6rem; color: rgba(247,251,250,0.18); letter-spacing: 0.04em; }
+.foot-copy { font-size: 0.68rem; color: rgba(247,251,250,0.5); letter-spacing: 0.04em; }
 .foot-links { display: flex; gap: 2rem; list-style: none; }
 .foot-links a {
-    font-size: 0.6rem; font-weight: 600;
+    font-size: 0.68rem; font-weight: 600;
     letter-spacing: 0.1em; text-transform: uppercase;
-    color: rgba(247,251,250,0.22); transition: color 0.2s;
+    color: rgba(247,251,250,0.6); transition: color 0.2s;
 }
 .foot-links a:hover { color: var(--mint); }
 
@@ -1516,7 +1527,7 @@ body[data-section="contact"]     .nav-burger span { background: #F2EDE3; }
 #outils[data-sec] { padding: clamp(4rem, 8vw, 7rem) 0; color: #0C1F26; }
 #outils[data-sec] .dual-title { color: #0C1F26; }
 #outils[data-sec] .dual-title .hw { color: #0F4C5C; }
-#outils[data-sec] .s-eyebrow { color: rgba(12,31,38,0.55); }
+#outils[data-sec] .s-eyebrow { color: rgba(12,31,38,0.7); }
 #outils[data-sec] .s-eyebrow::before { background: #0F4C5C; }
 #outils[data-sec] .tools-stack {
     margin-top: 3rem;
@@ -1549,7 +1560,7 @@ body[data-section="contact"]     .nav-burger span { background: #F2EDE3; }
     letter-spacing: -0.025em;
 }
 #outils[data-sec] .tools-cat-desc {
-    color: rgba(12,31,38,0.55);
+    color: rgba(12,31,38,0.7);
     font-size: 0.85rem;
     margin-top: 0.5rem;
 }
@@ -1644,7 +1655,7 @@ body[data-section="contact"]     .nav-burger span { background: #F2EDE3; }
 #parcours[data-sec] .tv-badge--mint { color: #1AA89A; border-color: rgba(45,212,191,0.5); }
 #parcours[data-sec] .tv-badge--accent { color: #F2EDE3; background: #1AA89A; border-color: #1AA89A; }
 #parcours[data-sec] .dual-title { color: #0C1F26; }
-#parcours[data-sec] .s-eyebrow  { color: rgba(12,31,38,0.55); }
+#parcours[data-sec] .s-eyebrow  { color: rgba(12,31,38,0.7); }
 
 /* ABOUT — déjà clair par défaut, juste s'assurer du contraste */
 #about[data-sec] { color: #0C1F26; }
@@ -1690,6 +1701,10 @@ body[data-section="contact"]     .nav-burger span { background: #F2EDE3; }
     color: rgba(242,237,227,0.65);
     border-color: rgba(242,237,227,0.15);
     background: transparent;
+}
+#projets[data-sec] .view-toggle {
+    background: transparent;
+    border-color: rgba(242,237,227,0.15);
 }
 #projets[data-sec] .filter-btn:hover,
 #projets[data-sec] .view-btn:hover { color: #F2EDE3; border-color: rgba(242,237,227,0.4); }
@@ -1845,9 +1860,9 @@ body[data-section="hero"] .sec-indicator { opacity: 0; pointer-events: none; }
 .si-dot.is-active::before { border-color: var(--section-accent, #2DD4BF); }
 .si-dot.is-passed { background: var(--section-accent, #2DD4BF); opacity: 0.5; }
 
+/* Sur mobile, les points recouvrent le contenu : on les retire */
 @media (max-width: 760px) {
-    .sec-indicator { right: 0.8rem; gap: 0.7rem; }
-    .si-tip { display: none; }
+    .sec-indicator { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
